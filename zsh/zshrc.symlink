@@ -31,16 +31,16 @@ setopt INC_APPEND_HISTORY
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 
+# asdf config
 asdf_sh_path="$(brew --prefix asdf)/libexec/asdf.sh"  # (homebrew install)
 [[ -s $asdf_sh_path ]] && source $asdf_sh_path
 
 # Load all of my aliases and shortcuts
 typeset -U my_aliases
-# typeset -U my_functions
+typeset -U my_functions
 my_aliases=($DOTFILES/**/aliases.sh)
-# my_functions=($DOTFILES/**/functions.sh)
-# my_files=($my_aliases $my_functions)
-my_files=($my_aliases)
+my_functions=($DOTFILES/**/functions.sh)
+my_files=($my_aliases $my_functions)
 
 for file in ${my_files} ; do
 	source $file
