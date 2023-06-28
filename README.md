@@ -38,3 +38,8 @@ It has to be listed LAST in the plugins list in `~/.zshrc` for it to be enabled.
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
+
+VS Code
+=======
+
+Command Palette > shell command
