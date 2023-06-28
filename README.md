@@ -39,6 +39,28 @@ It has to be listed LAST in the plugins list in `~/.zshrc` for it to be enabled.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
+Git
+===
+
+### To sign commits with GPG
+
+```bash
+brew install gpg
+ln -s /Volumes/DriveD/Dropbox/work/system/.gnupg ~/.gnupg
+```
+
+#### Sourcetree
+
+```bash
+ln `brew --prefix gpg`/bin/gpg `brew --prefix gpg`/bin/gpg2
+```
+
+Sourcetree > Preferences > Advanced > set custom path for GPG Program to `brew --prefix gpg`/bin/gpg
+
+Sourcetree > Repo settings > Security > Enable GPG signing
+
+Sourcetree > commit > Commit options > Sign commit
+
 VS Code
 =======
 
