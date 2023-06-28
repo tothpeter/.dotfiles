@@ -105,3 +105,12 @@ ln -s ~/.dotfiles/ruby/gemrc.symlink ~/.gemrc
 gem install rails
 gem install bundler
 ```
+
+
+Other tools
+===========
+
+```bash
+brew install thefuck
+brew install direnv
+```

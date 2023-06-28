@@ -6,7 +6,14 @@ alias rs='rspec'
 alias r4='rails _4.2.8_'
 alias r5='rails _5.0.2_'
 
-alias r='rails'
+function r() {
+  if [ -n "$USE_DOCKER_FOR_RAILS" ]; then
+    docker exec -it $DOCKER_CONTAINER_NAME rails $@
+  else
+    rails $@
+  fi
+}
+
 alias rc='r console'
 alias routes='r routes'
 
