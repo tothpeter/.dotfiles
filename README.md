@@ -50,8 +50,7 @@ asdf
 ### Install
 
 ```bash
-brew install asdf coreutils curl
-brew install asdf AAAAAAAAA
+brew install asdf
 ```
 
 ### Update

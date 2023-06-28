@@ -8,7 +8,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export dropbox_path="/Volumes/DriveD/Dropbox"
+export _dropbox_path="/Volumes/DriveD/Dropbox"
 
 export DOTFILES=$HOME/.dotfiles
 
@@ -21,8 +21,8 @@ COMPLETION_WAITING_DOTS="true"
 
 # Zsh History
 # (Save History to Dropbox if already set up)
-export PSY_HISTORY_FILE="$dropbox_path/work/system/.zsh_history"
-[[ -f $PSY_HISTORY_FILE ]] && export HISTFILE=$PSY_HISTORY_FILE
+_history_file="$_dropbox_path/work/system/.zsh_history"
+[[ -f $_history_file ]] && export HISTFILE=$_history_file
 
 export HISTSIZE=50000
 export SAVEHIST=$HISTSIZE
@@ -36,13 +36,13 @@ asdf_sh_path="$(brew --prefix asdf)/libexec/asdf.sh"  # (homebrew install)
 [[ -s $asdf_sh_path ]] && source $asdf_sh_path
 
 # Load all of my aliases and shortcuts
-typeset -U my_aliases
-typeset -U my_functions
-my_aliases=($DOTFILES/**/aliases.sh)
-my_functions=($DOTFILES/**/functions.sh)
-my_files=($my_aliases $my_functions)
+typeset -U _my_aliases
+typeset -U _my_functions
+_my_aliases=($DOTFILES/**/aliases.sh)
+_my_functions=($DOTFILES/**/functions.sh)
+_my_files=($_my_aliases $_my_functions)
 
-for file in ${my_files} ; do
+for file in ${_my_files} ; do
 	source $file
 done
 
