@@ -1,0 +1,47 @@
+#!/usr/bin/ruby
+
+class Object
+  # Get Local Methods of a Ruby Object
+  def local_methods(obj = self)
+    (obj.methods - obj.class.superclass.instance_methods).sort
+  end
+end
+
+def me
+  User.find_by(email: `git config --get user.email`.chomp)
+end
+
+def my_email
+  `git config --get user.email`.chomp
+end
+
+def r
+  reload!
+end
+
+# Copy to clipboard
+def copy(str)
+  IO.popen('pbcopy', 'w') { |f| f << str.to_s }
+end
+
+# Copies the result of the last operation you ran in IRB to the system
+# clipboard (if you're on macOS).
+def copy_last
+  last_value = IRB.CurrentContext.last_value
+  %x[echo '#{last_value}' | pbcopy]
+  "copied \`#{last_value}' to your clipboard"
+end
+
+# Copy Entire IRB History
+def copy_history
+  history = Readline::HISTORY.entries
+  index = history.rindex("exit") || -1
+  content = history[(index+1)..-2].join("\n")
+  puts content
+  copy content
+end
+
+# Paste from Clipboard
+def paste
+  `pbpaste`
+end

@@ -43,3 +43,44 @@ VS Code
 =======
 
 Command Palette > shell command
+
+asdf
+====
+
+### Install
+
+```bash
+brew install asdf coreutils curl
+brew install asdf AAAAAAAAA
+```
+
+### Update
+
+```bash
+asdf plugin-update ruby
+```
+
+Ruby
+====
+
+## Install
+
+```bash
+asdf plugin add ruby
+asdf install ruby latest
+asdf global ruby latest # set global ruby version
+```
+
+## Initial Set-up
+
+```bash
+ln -s ~/.dotfiles/ruby/irbrc.symlink ~/.irbrc
+ln -s ~/.dotfiles/ruby/gemrc.symlink ~/.gemrc
+```
+
+#### Install Rails and Bundler
+
+```bash
+gem install rails
+gem install bundler
+```
