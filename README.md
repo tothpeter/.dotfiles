@@ -7,6 +7,8 @@ git clone git@github.com:tothpeter/dotfiles.git
 mv ~/dotenv ~/.dotenv
 ```
 
+Install Homebrew: https://brew.sh
+
 iTerm2
 ======
 
@@ -28,6 +30,10 @@ touch ~/.hushlogin
 
 Oh My ZSH
 =========
+
+### Install
+
+https://ohmyz.sh/#install
 
 ### Sync config
 
