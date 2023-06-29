@@ -1,0 +1,12 @@
+*~
+.DS_Store
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# direnv
+.envrc
+
+# Ruby
+.byebug_history

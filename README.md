@@ -47,6 +47,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 Git
 ===
 
+### Sync config
+
+```bash
+ln -s ~/.dotfiles/git/.gitconfig.global ~/.gitconfig
+```
+
 ### Signing commits with GPG
 
 ```bash
