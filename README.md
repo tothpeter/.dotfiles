@@ -50,6 +50,12 @@ It has to be listed LAST in the plugins list in `~/.zshrc` for it to be enabled.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
+### Setup local secrets
+
+```bash
+touch $DOTFILES/.localrc
+```
+
 Git
 ===
 

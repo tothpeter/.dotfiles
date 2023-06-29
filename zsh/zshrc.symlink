@@ -60,4 +60,4 @@ done
 
 
 # Load .localrc for SUPER SECRET STUFF
-[[ -a ~/.localrc ]] && source ~/.localrc
+[[ -a $DOTFILES/.localrc ]] && source $DOTFILES/.localrc
