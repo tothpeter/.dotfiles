@@ -1,7 +1,6 @@
 # Peter's Dotfiles
 
-Install
-=======
+## Install
 
 ```bash
 git clone git@github.com:tothpeter/dotfiles.git
@@ -11,7 +10,7 @@ mv ~/dotenv ~/.dotenv
 iTerm2
 ======
 
-## Sync Configs
+### Sync config
 
 ```bash
 # Specify the preferences directory
@@ -21,17 +20,23 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iTer
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 ```
 
-zshrc
-=====
+### Turn off the login banner ("Last login ...")
 
-## Symlink `.zshrc`
+```bash
+touch ~/.hushlogin
+```
+
+Oh My ZSH
+=========
+
+### Sync config
 
 ```bash
 mv ~/.zshrc ~/.zshrc.old
 ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 ```
 
-## zsh-syntax-highlighting plugin
+### zsh-syntax-highlighting plugin
 
 It has to be listed LAST in the plugins list in `~/.zshrc` for it to be enabled.
 
@@ -42,7 +47,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 Git
 ===
 
-### To sign commits with GPG
+### Signing commits with GPG
 
 ```bash
 brew install gpg
@@ -64,6 +69,8 @@ Sourcetree > commit > Commit options > Sign commit
 VS Code
 =======
 
+### Make `code` command available in the terminal
+
 Command Palette > shell command
 
 asdf
@@ -84,7 +91,7 @@ asdf plugin-update ruby
 Ruby
 ====
 
-## Install
+### Install
 
 ```bash
 asdf plugin add ruby
@@ -92,14 +99,14 @@ asdf install ruby latest
 asdf global ruby latest # set global ruby version
 ```
 
-## Initial Set-up
+### Initial Set-up
 
 ```bash
 ln -s ~/.dotfiles/ruby/irbrc.symlink ~/.irbrc
 ln -s ~/.dotfiles/ruby/gemrc.symlink ~/.gemrc
 ```
 
-#### Install Rails and Bundler
+### Install Rails and Bundler
 
 ```bash
 gem install rails
