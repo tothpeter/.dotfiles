@@ -34,3 +34,4 @@ alias nah='git reset --hard && git clean -df' # discard all changes
 alias gu="git reset --soft 'HEAD^'" # undo last commit and keep its changes
 
 alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
+alias gx='gitx'
