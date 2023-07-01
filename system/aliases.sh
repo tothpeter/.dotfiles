@@ -32,3 +32,5 @@ alias cdtr='cd ~/tutorials/ruby'
 
 alias cdt='cd ~/tmp'
 alias cdtmp='cd ~/tmp'
+
+alias cde='cd ~/.dotfiles'

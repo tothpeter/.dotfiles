@@ -5,6 +5,7 @@ alias rs='rspec'
 # Rails
 alias r4='rails _4.2.8_'
 alias r5='rails _5.0.2_'
+alias r6='rails _6.1.7.3_'
 
 function r() {
   if [ -n "$USE_DOCKER_FOR_RAILS" ]; then
@@ -33,3 +34,7 @@ alias rgc='r generate controller'
 alias rgmig='r generate migration'
 alias rgmod='r generate model'
 alias rgs='r generate scaffold'
+
+# Other
+
+# alias rest='pumactl restart'
