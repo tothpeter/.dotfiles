@@ -18,3 +18,5 @@
 	template = /Users/peter/.stCommitMsg
 [tag]
 	template = /Users/peter/.stCommitMsg
+[push]
+	autoSetupRemote = true
