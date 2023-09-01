@@ -22,6 +22,7 @@ alias cd_blog_template='cd ~/projects/blog/template'
 alias cd_blog_content='cd ~/projects/blog/content'
 
 # Stable CDs
+alias cdc='cd ~/.dotfiles'
 alias cdr='cd "$(git rev-parse --show-toplevel || echo .)"' # cd root
 alias cdp='cd ~/projects'
 alias cdpn='cd ~/projects-not-mine'
