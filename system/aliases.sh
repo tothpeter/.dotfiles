@@ -15,7 +15,7 @@ alias reload="exec $SHELL -l"
 alias rmd="rm -rf"
 
 # Dynamic CDs
-# alias cdw='cd ~/projects'
+alias cdw='cd ~/projects/silverfin/silverfin'
 alias cdk='cd ~/projects/mine/kickstarter-clone'
 alias cd_blog='cd ~/projects/blog'
 alias cd_blog_template='cd ~/projects/blog/template'
