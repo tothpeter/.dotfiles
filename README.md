@@ -5,9 +5,9 @@
 ```bash
 git clone git@github.com:tothpeter/dotfiles.git
 mv ~/dotenv ~/.dotenv
+# Homebrew https://brew.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-
-Install Homebrew: https://brew.sh
 
 iTerm2
 ======
