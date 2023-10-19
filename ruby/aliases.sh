@@ -2,6 +2,9 @@ alias be='bundle exec'
 
 alias rs='rspec'
 
+alias c_arb='code ~/projects/a.rb'
+alias r_arb='ruby ~/projects/a.rb'
+
 # Rails
 alias r4='rails _4.2.8_'
 alias r5='rails _5.0.2_'
