@@ -58,6 +58,10 @@ for file in ${_my_files} ; do
   source $file
 done
 
+# Load the local untracked extensions and overwrites
+for file in $DOTFILES/local/**/*.sh ; do
+  source $file
+done
 
 # Load .localrc for SUPER SECRET STUFF
 [[ -a $DOTFILES/.localrc ]] && source $DOTFILES/.localrc
