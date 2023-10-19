@@ -6,7 +6,11 @@
     {
       "label": "run_rspec",
       "type": "shell",
-      "command": "osascript /Users/peter/.dotfiles/iTerm/run_rspec.scpt ${file}",
+      "command": "osascript",
+      "args": [
+        "/Users/peter/.dotfiles/iTerm/run_rspec.scpt",
+        "${relativeFile}"
+      ],
       "presentation": {
         "reveal": "never",
         "focus": false
