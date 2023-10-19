@@ -55,7 +55,7 @@ _my_functions=($DOTFILES/**/functions.sh)
 _my_files=($_my_aliases $_my_functions)
 
 for file in ${_my_files} ; do
-	source $file
+  source $file
 done
 
 
