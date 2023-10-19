@@ -1,0 +1,95 @@
+// Place your key bindings in this file to override the defaults
+// Old ones
+// 'ctrl-shift-.': 'erb-snippets:erb_tags'
+// 'ctrl-up': 'emmet:increment-number-by-1'
+// 'ctrl-down': 'emmet:decrement-number-by-1'
+// 'ctrl-alt-enter': 'emmet:wrap-with-abbreviation'
+// 'alt-cmd-enter': 'emmet:wrap-with-abbreviation'
+// 'cmd-shift-y': 'calc:evaluate'
+// 'alt-ctrl-r': 'rails-rspec:toggle-spec-file'
+// 'cmd-shift-m': 'rails-latest-migration:list'
+// 'alt-cmd-down': 'goto-definition:go'
+[
+  {
+    "key": "cmd+k cmd+c",
+    "command": "extension.changeCase.camel"
+  },
+  {
+    "key": "cmd+k cmd+p",
+    "command": "extension.changeCase.pascal"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "extension.changeCase.constant"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "extension.changeCase.lower"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "extension.changeCase.snake"
+  },
+  {
+    "key": "shift+backspace",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  { "key": "cmd+1", "command": "workbench.action.openEditorAtIndex1" },
+  { "key": "cmd+2", "command": "workbench.action.openEditorAtIndex2" },
+  { "key": "cmd+3", "command": "workbench.action.openEditorAtIndex3" },
+  { "key": "cmd+4", "command": "workbench.action.openEditorAtIndex4" },
+  { "key": "cmd+5", "command": "workbench.action.openEditorAtIndex5" },
+  { "key": "cmd+6", "command": "workbench.action.openEditorAtIndex6" },
+  { "key": "cmd+7", "command": "workbench.action.openEditorAtIndex7" },
+  { "key": "cmd+8", "command": "workbench.action.openEditorAtIndex8" },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.openEditorAtIndex9"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f5",
+    "command": "editor.action.sortLinesAscending"
+  },
+  {
+    "key": "shift+cmd+\\",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "rails-go-to-spec-2.railsGoToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+y",
+    "command": "-rails-go-to-spec-2.railsGoToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "extension.railsLatestMigration"
+  },
+]

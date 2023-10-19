@@ -1,0 +1,147 @@
+{
+  "workbench.colorTheme": "One Dark Pro Flat",
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "file-icons",
+  "files.trimTrailingWhitespace": true,
+  "editor.tabCompletion": "onlySnippets",
+  "editor.snippetSuggestions": "top",
+
+  "commands.commands": [
+
+    // https://primer.style/octicons/
+    // {
+    //   "command": "commands.refresh",
+    //   "text": "$(sync)",
+    //   "tooltip": "Refresh commands",
+    //   "color": "#FFCC00"
+    // },
+    {
+      "command": "workbench.action.toggleActivityBarVisibility",
+      "text": "$(chevron-right)",
+      "tooltip": "Toggle activity bar visibility",
+      "alignment": "left",
+      "color": "#fff"
+    },
+    {
+      "command": "copyRelativeFilePath",
+      "text": "$(copy)",
+      "tooltip": "Copy relative file path",
+      "alignment": "left",
+      "color": "#fff"
+    },
+    {
+      "command": "copy-relative-path-and-line-numbers.both",
+      "text": "$(copy)",
+      "tooltip": "Copy relative file path with line numbers",
+      "alignment": "left",
+      "color": "#fff"
+    },
+    // {
+    //   "command": "extension.switchToSpec",
+    //   "text": "$(beaker) Spec",
+    //   "tooltip": "Spec toggle",
+    //   "alignment": "left",
+    //   "color": "#fff",
+    //   "filterLanguageRegex": "ruby"
+    // },
+    {
+      "command": "rails-go-to-spec-2.railsGoToSpec",
+      "text": "$(beaker) Spec",
+      "tooltip": "Spec toggle",
+      "alignment": "left",
+      "color": "#fff",
+      "filterLanguageRegex": "ruby"
+    },
+    {
+      "command": "workbench.panel.chat.view.copilot.focus",
+      "text": "$(github)",
+      "tooltip": "GH Copilot",
+      "alignment": "left",
+      "color": "#fff",
+    },
+    {
+      "command": "workbench.action.openChat.copilot",
+      "text": "$(github)",
+      "tooltip": "GH Copilot",
+      "alignment": "left",
+      "color": "#fff",
+    },
+    {
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["echo"],
+      "text": "$(play)$(beaker)",
+      "tooltip": "Run RSpec in iTerm2",
+      "alignment": "left",
+      "color": "#fff",
+    },
+    {
+      "command": "shell",
+      "arguments": ["osascript /Users/peter/.dotfiles/iTerm/run_rspec.scpt ${file}"],
+      "text": "$(play)$(beaker)",
+      "tooltip": "Run RSpec in iTerm2",
+      "alignment": "left",
+      "color": "#fff",
+    },
+    {
+      "text": "$(markdown)",
+      "command": "markdown.showPreviewToSide",
+      "tooltip": "Open markdown preview",
+      "filterFileRegex": ".*\\.md"
+    },
+  ],
+  "workbench.startupEditor": "none",
+  "editor.rulers": [80],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "editor.tabSize": 2,
+  "workbench.editor.decorations.colors": false,
+  "extensions.ignoreRecommendations": true,
+  "files.insertFinalNewline": true,
+  "explorer.": false,
+  "files.exclude": {
+    "**/.tags": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "[feature]": {
+    "editor.defaultFormatter": "siumennel.turnip"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "editor.inlineSuggest.enabled": true,
+
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "explorer.confirmDragAndDrop": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "code-runner.showRunCommandInExplorerContextMenu": false,
+  "liveServer.settings.fullReload": true,
+  "css.lint.unknownAtRules": "ignore",
+  "files.trimFinalNewlines": true,
+  "editor.fontSize": 14,
+  "breadcrumbs.symbolPath": "off",
+  "editor.copyWithSyntaxHighlighting": false,
+  "explorer.autoReveal": "focusNoScroll",
+  "search.exclude": {
+    "**/.git": true,
+    "**/log": true
+  },
+  "workbench.editor.empty.hint": "hidden"
+}
