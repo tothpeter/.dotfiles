@@ -35,3 +35,7 @@ alias cdt='cd ~/tmp'
 alias cdtmp='cd ~/tmp'
 
 alias cde='cd ~/.dotfiles'
+
+# Others
+
+alias ng='ngrok http 3000' # opens an Ngrok tunnel to the local dev env
