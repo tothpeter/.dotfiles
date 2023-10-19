@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "echo",
+      "label": "run_rspec",
       "type": "shell",
       "command": "osascript /Users/peter/.dotfiles/iTerm/run_rspec.scpt ${file}",
       "presentation": {

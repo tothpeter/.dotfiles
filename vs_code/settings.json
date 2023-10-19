@@ -7,14 +7,6 @@
   "editor.snippetSuggestions": "top",
 
   "commands.commands": [
-
-    // https://primer.style/octicons/
-    // {
-    //   "command": "commands.refresh",
-    //   "text": "$(sync)",
-    //   "tooltip": "Refresh commands",
-    //   "color": "#FFCC00"
-    // },
     {
       "command": "workbench.action.toggleActivityBarVisibility",
       "text": "$(chevron-right)",
@@ -45,14 +37,6 @@
     //   "filterLanguageRegex": "ruby"
     // },
     {
-      "command": "rails-go-to-spec-2.railsGoToSpec",
-      "text": "$(beaker) Spec",
-      "tooltip": "Spec toggle",
-      "alignment": "left",
-      "color": "#fff",
-      "filterLanguageRegex": "ruby"
-    },
-    {
       "command": "workbench.panel.chat.view.copilot.focus",
       "text": "$(github)",
       "tooltip": "GH Copilot",
@@ -67,20 +51,21 @@
       "color": "#fff",
     },
     {
-      "command": "workbench.action.tasks.runTask",
-      "arguments": ["echo"],
-      "text": "$(play)$(beaker)",
-      "tooltip": "Run RSpec in iTerm2",
+      "command": "rails-go-to-spec-2.railsGoToSpec",
+      "text": "$(beaker) Spec",
+      "tooltip": "Spec toggle",
       "alignment": "left",
       "color": "#fff",
+      "filterLanguageRegex": "ruby"
     },
     {
-      "command": "shell",
-      "arguments": ["osascript /Users/peter/.dotfiles/iTerm/run_rspec.scpt ${file}"],
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["run_rspec"],
       "text": "$(play)$(beaker)",
       "tooltip": "Run RSpec in iTerm2",
       "alignment": "left",
       "color": "#fff",
+      "filterLanguageRegex": "ruby"
     },
     {
       "text": "$(markdown)",
@@ -143,5 +128,6 @@
     "**/.git": true,
     "**/log": true
   },
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.activityBar.visible": false
 }
