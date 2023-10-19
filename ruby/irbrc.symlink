@@ -1,5 +1,8 @@
 #!/usr/bin/ruby
 
+# Load local extensions
+Dir['../local/**/*.rb'].sort.each { |f| require f }
+
 class Object
   # Get Local Methods of a Ruby Object
   def local_methods(obj = self)
