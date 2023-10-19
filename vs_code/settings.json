@@ -68,6 +68,15 @@
       "filterLanguageRegex": "ruby"
     },
     {
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["run_rspec_for_current_line"],
+      "text": "$(play)$(beaker)",
+      "tooltip": "Run RSpec in iTerm2",
+      "alignment": "left",
+      "color": "#fff",
+      "filterLanguageRegex": "ruby"
+    },
+    {
       "text": "$(markdown)",
       "command": "markdown.showPreviewToSide",
       "tooltip": "Open markdown preview",
