@@ -34,5 +34,8 @@ alias gplm='git fetch origin $(git_main_branch):$(git_main_branch)'
 alias nah='git reset --hard && git clean -df' # discard all changes
 alias gu="git reset --soft 'HEAD^'" # Git undo = removes the last commit while keeping its changes
 
+alias gcf="!git log -n 10 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup" # Git commit fixup | creates a fixup commit | brew install fzf
+alias gsf='git rebase -i --autosquash $(git_main_branch)' # Git squash fixup commits
+
 alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
 alias gx='gitx'
