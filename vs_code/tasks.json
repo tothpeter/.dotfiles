@@ -8,7 +8,7 @@
       "type": "shell",
       "command": "osascript",
       "args": [
-        "/Users/peter/.dotfiles/iTerm/run_rspec.scpt",
+        "~/.dotfiles/iTerm/run_rspec.scpt",
         "${relativeFile}"
       ],
       "presentation": {
@@ -19,9 +19,23 @@
     {
       "label": "run_rspec_for_current_line",
       "type": "shell",
+      "command": "~/.asdf/shims/python3",
+      "args": [
+        "~/.dotfiles/iTerm/run_rspec.py",
+        "${relativeFile}:${lineNumber}"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "focus": false
+      }
+    },
+    {
+      // AppleScript
+      "label": "run_rspec_for_current_line_old",
+      "type": "shell",
       "command": "osascript",
       "args": [
-        "/Users/peter/.dotfiles/iTerm/run_rspec.scpt",
+        "~/.dotfiles/iTerm/run_rspec.scpt",
         "${relativeFile}:${lineNumber}"
       ],
       "presentation": {

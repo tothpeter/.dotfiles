@@ -52,7 +52,7 @@
     },
     {
       "command": "rails-go-to-spec-2.railsGoToSpec",
-      "text": "$(beaker) Spec",
+      "text": "$(beaker) Switch",
       "tooltip": "Spec toggle",
       "alignment": "left",
       "color": "#fff",
@@ -61,8 +61,8 @@
     {
       "command": "workbench.action.tasks.runTask",
       "arguments": ["run_rspec"],
-      "text": "$(play)$(beaker)",
-      "tooltip": "Run RSpec in iTerm2",
+      "text": "$(play)$(beaker) File",
+      "tooltip": "File",
       "alignment": "left",
       "color": "#fff",
       "filterLanguageRegex": "ruby"
@@ -70,8 +70,8 @@
     {
       "command": "workbench.action.tasks.runTask",
       "arguments": ["run_rspec_for_current_line"],
-      "text": "$(play)$(beaker)",
-      "tooltip": "Run RSpec in iTerm2",
+      "text": "$(play)$(beaker) Line",
+      "tooltip": "Line",
       "alignment": "left",
       "color": "#fff",
       "filterLanguageRegex": "ruby"
@@ -116,7 +116,7 @@
   "emmet.showSuggestionsAsSnippets": true,
   "explorer.confirmDragAndDrop": false,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": true,
     "markdown": true,
     "scminput": false
