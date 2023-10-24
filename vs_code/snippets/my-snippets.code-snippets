@@ -57,9 +57,9 @@
     "prefix": "defi",
     "body": ["def initialize", "  ${0}", "end"]
   },
-  "defs": {
+  "defss": {
     "scope": "ruby",
-    "prefix": "defs",
+    "prefix": "defss",
     "body": ["def self.${1:item}", "  ${0}", "end"]
   },
   "rubocop disable": {
