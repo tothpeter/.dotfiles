@@ -29,7 +29,20 @@ alias logt='tail -f log/test.log'
 alias mig='r db:migrate'
 alias migt='RAILS_ENV=test r db:migrate'
 
-alias rollb='r db:rollback'
+# alias rollb_alias='r db:rollback'
+
+rollb() {
+  if [ -z "$1" ]; then
+    rollb_alias
+  else
+    rollb_version $1
+  fi
+}
+
+rollb_version() {
+  r db:migrate:down VERSION=$1
+}
+
 alias rollbt='RAILS_ENV=test r db:rollback'
 
 alias seed='r db:seed'
