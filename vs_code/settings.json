@@ -52,7 +52,7 @@
     },
     {
       "command": "rails-go-to-spec-2.railsGoToSpec",
-      "text": "$(beaker) Switch",
+      "text": "$(beaker) Spec",
       "tooltip": "Spec toggle",
       "alignment": "left",
       "color": "#fff",
