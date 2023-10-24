@@ -70,6 +70,12 @@
       "# rubocop:enable ${1:Layout/LineLength}"
     ]
   },
+  // RSpec
+  "defs": {
+    "scope": "ruby",
+    "prefix": "descc",
+    "body": ["described_class"]
+  },
   // Overwrites
   ".each": {
     "scope": "ruby",
