@@ -17,10 +17,15 @@
   // }
 
   // ================ Ruby ================
-  "print line": {
+  "print spearator line": {
     "scope": "ruby",
     "prefix": "p",
     "body": ["p '-------------------------------'"]
+  },
+  "print line": {
+    "scope": "ruby",
+    "prefix": "pp",
+    "body": ["p '-------------------------------'", "p ${0}"]
   },
   "TODO": {
     "scope": "ruby",
