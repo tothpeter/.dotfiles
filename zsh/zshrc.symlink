@@ -37,9 +37,9 @@ asdf_sh_path="$(brew --prefix asdf)/libexec/asdf.sh"  # (homebrew install)
 
 
 # Enable `thefuck` if available
-if command -v thefuck >/dev/null ; then
-	eval $(thefuck --alias)
-fi
+# if command -v thefuck >/dev/null ; then
+# 	eval $(thefuck --alias)
+# fi
 
 # Enable `direnv` if available
 if command -v direnv >/dev/null ; then
