@@ -2,7 +2,8 @@ alias backup_vlc_config='mv -v ~/Library/Preferences/org.videolan.vlc/vlcrc ~/.d
 alias apply_vlc_config_from_dotfiles='rmd ~/Library/Preferences/org.videolan.vlc/vlcrc ; ln -s ~/.dotfiles/others/vlc/vlcrc ~/Library/Preferences/org.videolan.vlc/vlcrc'
 
 alias k='kubectl'
-alias kl='kubectl logs -f'
-alias kg='kubectl get'
-alias kp='kubectl get pods'
-alias k_pods_mine='kubectl get pods | grep peter'
+alias k_logs='kubectl logs -f'
+alias k_get='kubectl get'
+alias k_pods='kp'
+
+alias ng='ngrok http 3000' # opens an Ngrok tunnel to the local dev env

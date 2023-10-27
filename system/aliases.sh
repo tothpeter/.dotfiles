@@ -1,11 +1,8 @@
-# Edit config
-
-alias ec='code ~/.dotfiles'
-alias eca='code ~/.dotfiles/ruby/aliases.sh ~/.dotfiles/system/aliases.sh '
+alias ec='code ~/.dotfiles' # Edit config
 
 alias c='code .'
-alias o='open .'
-alias f='fuck'
+alias o='open .' # Open current directory in finder
+alias f='fuck' # It was not me
 alias http_server='python -m SimpleHTTPServer 8000'
 
 # Reload the shell (i.e. invoke as a login shell)
@@ -14,14 +11,14 @@ alias reload="exec $SHELL -l"
 # Remove folder
 alias rmd="rm -rf"
 
-# Dynamic CDs
+# Temp CDs
 alias cdw='cd ~/projects/silverfin/silverfin'
 alias cdk='cd ~/projects/mine/kickstarter-clone'
 alias cd_blog='cd ~/projects/blog'
 alias cd_blog_template='cd ~/projects/blog/template'
 alias cd_blog_content='cd ~/projects/blog/content'
 
-# Stable CDs
+# Final CDs
 alias cdc='cd ~/.dotfiles'
 alias cdr='cd "$(git rev-parse --show-toplevel || echo .)"' # cd root
 alias cdp='cd ~/projects'
@@ -35,7 +32,3 @@ alias cdt='cd ~/tmp'
 alias cdtmp='cd ~/tmp'
 
 alias cde='cd ~/.dotfiles'
-
-# Others
-
-alias ng='ngrok http 3000' # opens an Ngrok tunnel to the local dev env
