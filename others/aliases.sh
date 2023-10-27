@@ -4,6 +4,6 @@ alias apply_vlc_config_from_dotfiles='rmd ~/Library/Preferences/org.videolan.vlc
 alias k='kubectl'
 alias k_logs='kubectl logs -f'
 alias k_get='kubectl get'
-alias k_pods='kp'
+alias k_pods='kubectl get pods'
 
 alias ng='ngrok http 3000' # opens an Ngrok tunnel to the local dev env
