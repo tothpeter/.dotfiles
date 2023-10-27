@@ -7,35 +7,44 @@ alias grbi7='grbi HEAD~7'
 alias grbi8='grbi HEAD~8'
 alias grbi9='grbi HEAD~9'
 
-# Git rebase master (It stashes the changes if there were any)
-alias grbm='git_rebase_to_main_with_changes'
-
-# Git rebase master iterative
+# Rebase to master iteratively
 alias grbmi='EDITOR="code --wait" grbi main'
 
-# Git update = sync down changes from the remote master to the current branch
+# Squash fixup commits
+alias grb_fixups='git rebase -i --autosquash $(git_main_branch)'
+
+# Rebase all commits in the current branch iteratively
+alias grbia='git rebase -i $(git_main_branch)'
+
+# Update = sync changes from the remote master to the current branch
 alias gupd='gplm ; grbm ; gfa'
-# Git update iterative
+# Update iteratively
 alias gupdi='gplm && grbmi'
-# Git update remote
+# Update remote = sync changes from the current branch to its remote counterpart
 alias gupdr='gplm ; grbm ; gpf ; gfa'
 
-alias gc='git commit -m' # git commit for lazy devs like myself
-alias gam='git add . ; git commit --amend --no-edit' # ammend all changes to the last commit
+# Commit for lazy devs like myself
+alias gc='git commit -m'
+# Fixup commit | brew install fzf
+alias gc_fixup="!git log -n 10 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+# Ammend all changes to the last commit
+alias gam='git add . ; git commit --amend --no-edit'
 
 alias gl='git log --oneline --graph --all --decorate'
-alias gr='git remote -v' # lists the remotes
+# List the remotes
+alias gr='git remote -v'
 alias gs='git status'
 alias gpf='git push -f'
 alias gpl='git pull'
 alias gplr='git pull --rebase'
-# Git pull master = update the local main branch, without the need to switch to it
+# Pull master = update the local main branch, without the need to switch to it
 alias gplm='git fetch origin $(git_main_branch):$(git_main_branch)'
-alias nah='git reset --hard && git clean -df' # discard all changes
-alias gu="git reset --soft 'HEAD^'" # Git undo = removes the last commit while keeping its changes
+# Discard all changes
+alias nah='git reset --hard && git clean -df'
+# Undo = removes the last commit while keeping its changes
+alias gu="git reset --soft 'HEAD^'"
 
-alias gcf="!git log -n 10 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup" # Git commit fixup | creates a fixup commit | brew install fzf
-alias gsf='git rebase -i --autosquash $(git_main_branch)' # Git squash fixup commits
-
+# Open repository in SourceTree
 alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
 alias gx='gitx'
+alias gxe='open -a SourceTree ~/.dotfiles'

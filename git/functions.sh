@@ -1,5 +1,6 @@
 # It rebases the current branch to the main branch even if there are uncommitted changes
-git_rebase_to_main_with_changes() {
+unalias grbm
+grbm() {
   # Check if there are any changes to stash
   if [ -n "$(git status --porcelain)" ]; then
     git stash push --include-untracked
