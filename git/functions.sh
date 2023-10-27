@@ -15,3 +15,9 @@ grbm() {
     git stash pop
   fi
 }
+
+# Rebase the last N commits iteratively
+# Example: grbi 3 # Rebase the last 3 commits
+grbin() {
+  grbi "HEAD~$1"
+}
