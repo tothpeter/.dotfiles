@@ -3,7 +3,6 @@
 	email = tothpeter08@gmail.com
 [core]
 	excludesfile = /Users/peter/.dotfiles/git/.gitignore.global
-	editor = code --wait
 [pull]
 	rebase = true
 [init]

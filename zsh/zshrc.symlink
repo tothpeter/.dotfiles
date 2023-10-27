@@ -48,11 +48,16 @@ fi
 
 
 # Load all of my aliases and shortcuts
+typeset -U _my_variables
+_my_variables=($DOTFILES/**/variables.sh)
+
 typeset -U _my_aliases
-typeset -U _my_functions
 _my_aliases=($DOTFILES/**/aliases.sh)
+
+typeset -U _my_functions
 _my_functions=($DOTFILES/**/functions.sh)
-_my_files=($_my_aliases $_my_functions)
+
+_my_files=($_my_variables $_my_aliases $_my_functions)
 
 for file in ${_my_files} ; do
   source $file
