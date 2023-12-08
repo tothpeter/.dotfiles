@@ -44,6 +44,9 @@ alias nah='git reset --hard && git clean -df'
 # Undo = removes the last commit while keeping its changes
 alias gu="git reset --soft 'HEAD^'"
 
+# Git checkout back to the previous branch
+alias gchb="git checkout -"
+
 # Open repository in SourceTree
 alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
 alias gx='gitx'
