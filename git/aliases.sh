@@ -35,8 +35,8 @@ alias gl='git log --oneline --graph --all --decorate'
 alias gr='git remote -v'
 alias gs='git status'
 alias gpf='git push -f'
-alias gpl='git pull'
-alias gplr='git pull --rebase'
+alias gpl='git pull origin $(git_current_branch)'
+alias gplr='git pull --rebase origin $(git_current_branch)'
 # Pull master = update the local main branch, without the need to switch to it
 alias gplm='git fetch origin $(git_main_branch):$(git_main_branch)'
 # Discard all changes
