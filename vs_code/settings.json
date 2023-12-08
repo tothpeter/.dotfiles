@@ -121,7 +121,6 @@
     "markdown": true,
     "scminput": false
   },
-  "workbench.editor.untitled.hint": "hidden",
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   },
@@ -138,5 +137,5 @@
     "**/log": true
   },
   "workbench.editor.empty.hint": "hidden",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.location": "hidden"
 }
