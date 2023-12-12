@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 # Load local extensions
-Dir['../local/**/*.rb'].sort.each { |f| require f }
+Dir['/Users/peter/.dotfiles/**/*irbrc.rb'].sort.each { |f| require f }
 
 class Object
   # Get Local Methods of a Ruby Object
