@@ -3,8 +3,6 @@
 	email = tothpeter08@gmail.com
 [core]
 	excludesfile = /Users/peter/.dotfiles/git/.gitignore.global
-[pull]
-	rebase = true
 [init]
 	defaultBranch = main
 [difftool "sourcetree"]
