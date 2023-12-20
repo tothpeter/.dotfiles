@@ -98,7 +98,6 @@
   "workbench.editor.decorations.colors": false,
   "extensions.ignoreRecommendations": true,
   "files.insertFinalNewline": true,
-  "explorer.": false,
   "files.exclude": {
     "**/.tags": true
   },
