@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# This script is used in SourceTree as a custom action to create a fixup commit
-# then immediately rebase with autosquash.
-# I use this to add changes to an existing commit without having to manually
-# rebase and squash.
+# This script is used as a SourceTree custom action to amend staged changes to the selected commit with autosquash.
 
-# SourceTree passes the $SHA as a parameter to this script
+# !!!IMPORTANT!!!: This will squash all the existing fixup commits respectively.
+
+# SourceTree custom action settings:
+# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_staged_changes_to_commit_with_autosquash.sh
+# Menu caption: Amend staged (autosquash)
+# Parameters: $SHA
 
 git_main_branch () {
 	command git rev-parse --git-dir &> /dev/null || return
@@ -30,10 +32,10 @@ if [ -n "$(git status --porcelain)" ]; then
   changes_stashed=true
 fi
 
-# Rebase with autosquash
+# Rebase with autosquash without opening the editor
 GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $(git_main_branch)
 
-# Pop the stash if it was previously stashed
+# Pop the last stash if we stashed changes previously
 if [ "$changes_stashed" = true ]; then
   git stash pop
 fi
