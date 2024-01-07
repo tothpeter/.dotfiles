@@ -1,5 +1,24 @@
 # Peter's Dotfiles
 
+Tools and shortcuts I use daily for software development.
+
+## Example usage
+
+```bash
+# Git update: Pull all the changes to the local main Git branch, rebase the current branch on top of it, and remove all deleted remote branches. Works even if you have uncommitted changes.
+$ gupd
+# Git: Discard all changes
+$ nah
+# Git X: Open the current Git repository in SourceTree (even if the Git folder is several levels up)
+$ gx
+```
+
+Create a new SourceTree custom actions for `git/sourcetree_custom_actions/create_fixup_commit.sh`. Then right click on a commit and select Create fixup commit. It will create a fixup commit for the selected commit using the files added to staging.
+
+Check out the rest of the custom actions in git/sourcetree_custom_actions.
+
+Put any custom variables.sh, aliases.sh, functions.sh or .rb in `local` and they will be loaded recursively and automatically.
+
 ## Install
 
 ```bash
