@@ -25,6 +25,87 @@ Check out the rest of the custom actions in `git/sourcetree_custom_actions`.
 
 Put any custom variables.sh, aliases.sh, functions.sh or .rb in `local` and they will be loaded recursively and automatically.
 
+### Run any RSpec in the current iTerm2 tab from VS Code by pressing a button
+
+Install the [Commands VS Code extension](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-commands)
+
+Add the following to your VS Code settings.json:
+
+```json
+{
+  "command": "workbench.action.tasks.runTask",
+  "arguments": ["run_rspec"],
+  "text": "$(play)$(beaker) File",
+  "tooltip": "File",
+  "alignment": "left",
+  "color": "#fff",
+  "filterLanguageRegex": "ruby"
+},
+{
+  "command": "workbench.action.tasks.runTask",
+  "arguments": ["run_rspec_for_current_line"],
+  "text": "$(play)$(beaker) Line",
+  "tooltip": "Line",
+  "alignment": "left",
+  "color": "#fff",
+  "filterLanguageRegex": "ruby"
+}
+```
+
+Add the following to your VS Code tasks.json:
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    // AppleScript
+    {
+      "label": "run_rspec",
+      "type": "shell",
+      "command": "osascript",
+      "args": [
+        "~/.dotfiles/iTerm/run_rspec.scpt", // The script is in this repo, don't forget to copy it and change the path
+        "${relativeFile}"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "focus": false
+      }
+    },
+    // Python
+    {
+      "label": "run_rspec_for_current_line",
+      "type": "shell",
+      "command": "~/.asdf/shims/python3", // CHANGE THIS TO YOUR PYTHON PATH
+      "args": [
+        "~/.dotfiles/iTerm/run_rspec.py", // The script is in this repo, don't forget to copy it and change the path
+        "${relativeFile}:${lineNumber}"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "focus": false
+      }
+    },
+    // AppleScript
+    {
+      "label": "run_rspec_for_current_line_apple_script",
+      "type": "shell",
+      "command": "osascript",
+      "args": [
+        "~/.dotfiles/iTerm/run_rspec.scpt", // The script is in this repo, don't forget to copy it and change the path
+        "${relativeFile}:${lineNumber}"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "focus": false
+      }
+    }
+  ]
+}
+```
+
+Open a spec file and press the "beaker" button in the statusbar.
+
 ## Install
 
 ```bash
