@@ -3,6 +3,9 @@
 # This script is used in SourceTree as a custom action to create a fixup commit
 # to the selected commit.
 
-# SourceTree passes the $SHA as a parameter to this script
+# SourceTree custom action settings:
+# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit.sh
+# Menu caption: Fixup
+# Parameters: $SHA
 
 git commit --fixup $1

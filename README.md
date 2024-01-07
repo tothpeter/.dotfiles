@@ -11,11 +11,17 @@ $ gupd
 $ nah
 # Git X: Open the current Git repository in SourceTree (even if the Git folder is several levels up)
 $ gx
+# Git amend: amend all staged or unstaged changes to the last commit. Very useful for TDD.
+$ gam
+# Git rebase interactive all: Starts an interactive rebase for all the commits on the current branch.
+$ grbia
+# Git rebase fixups: squash all fixup commits into the right commits.
+$ grb_fixups
 ```
 
-Create a new SourceTree custom actions for `git/sourcetree_custom_actions/create_fixup_commit.sh`. Then right click on a commit and select Create fixup commit. It will create a fixup commit for the selected commit using the files added to staging.
+Create a new SourceTree custom actions for `git/sourcetree_custom_actions/create_fixup_commit.sh`. Follow the instructions in the file. Then right click on a commit, Custom Actions > `Fixup`. It will create a fixup commit for the selected commit using the files added to staging.
 
-Check out the rest of the custom actions in git/sourcetree_custom_actions.
+Check out the rest of the custom actions in `git/sourcetree_custom_actions`.
 
 Put any custom variables.sh, aliases.sh, functions.sh or .rb in `local` and they will be loaded recursively and automatically.
 
