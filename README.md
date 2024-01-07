@@ -21,6 +21,10 @@ ln -s ~/.dotfiles/vs_code/tasks.json ~/Library/Application\ Support/Code/User/ta
 ln -s ~/.dotfiles/vs_code/snippets/ ~/Library/Application\ Support/Code/User/snippets
 ```
 
+### Make `code` command available in the terminal
+
+Command Palette > shell command
+
 iTerm2
 ======
 
@@ -95,13 +99,6 @@ Sourcetree > Preferences > Advanced > set custom path for GPG Program to `brew -
 Sourcetree > Repo settings > Security > Enable GPG signing
 
 Sourcetree > commit > Commit options > Sign commit
-
-VS Code
-=======
-
-### Make `code` command available in the terminal
-
-Command Palette > shell command
 
 asdf
 ====
