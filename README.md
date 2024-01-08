@@ -9,7 +9,7 @@ Tools and shortcuts I use daily for software development.
 $ gupd
 # Git: Discard all changes
 $ nah
-# Git X: Open the current Git repository in SourceTree (even if the Git folder is several levels up)
+# Git X: Open the current Git repository in SourceTree. (even if the Git folder is several levels up)
 $ gx
 # Git amend: amend all staged or unstaged changes to the last commit. Very useful for TDD.
 $ gam
@@ -115,8 +115,7 @@ mv ~/dotenv ~/.dotenv
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-VS Code
-=======
+## VS Code
 
 ### Sync config
 
@@ -131,8 +130,7 @@ ln -s ~/.dotfiles/vs_code/snippets/ ~/Library/Application\ Support/Code/User/sni
 
 Command Palette > shell command
 
-iTerm2
-======
+## iTerm2
 
 ### Sync config
 
@@ -150,8 +148,7 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 touch ~/.hushlogin
 ```
 
-Oh My ZSH
-=========
+## Oh My ZSH
 
 ### Install
 
@@ -178,8 +175,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 touch $DOTFILES/.localrc
 ```
 
-Git
-===
+## Git
 
 ### Sync config
 
@@ -206,8 +202,7 @@ Sourcetree > Repo settings > Security > Enable GPG signing
 
 Sourcetree > commit > Commit options > Sign commit
 
-asdf
-====
+## asdf
 
 ### Install
 
@@ -221,8 +216,7 @@ brew install asdf
 asdf plugin-update ruby
 ```
 
-Ruby
-====
+## Ruby
 
 ### Install
 
@@ -247,8 +241,7 @@ gem install bundler
 ```
 
 
-Other tools
-===========
+## Other tools
 
 ```bash
 brew install thefuck
