@@ -1,4 +1,5 @@
 {
+  "vim.disableExtension": true,
   "workbench.colorTheme": "One Dark Pro Flat",
   "editor.minimap.enabled": false,
   "workbench.iconTheme": "file-icons",
@@ -81,6 +82,11 @@
       "command": "markdown.showPreviewToSide",
       "tooltip": "Open markdown preview",
       "filterFileRegex": ".*\\.md"
+    },
+    {
+      "text": "Vim",
+      "command": "toggleVim",
+      "tooltip": "Toggle Vim mode"
     },
   ],
   "workbench.startupEditor": "none",
