@@ -8,7 +8,7 @@ alias http_server='python -m SimpleHTTPServer 8000'
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# Remove folder
+# Remove directory
 alias rmd="rm -rf"
 
 # Temp CDs
