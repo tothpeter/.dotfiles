@@ -49,6 +49,11 @@ alias gu="git reset --soft 'HEAD^'"
 # Git checkout back to the previous branch
 alias gchb="git checkout -"
 
+# Git diff remote
+alias gdr="git diff @{upstream}"
+# Git diff origin
+alias gdo="git diff @{upstream}"
+
 # Open repository in SourceTree
 alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
 alias gx='gitx'
