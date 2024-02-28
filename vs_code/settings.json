@@ -115,7 +115,8 @@
   "editor.inlineSuggest.enabled": true,
 
   "emmet.includeLanguages": {
-    "erb": "html"
+    "erb": "html",
+    "vue": "html"
   },
   "emmet.showAbbreviationSuggestions": true,
   "emmet.showSuggestionsAsSnippets": true,
