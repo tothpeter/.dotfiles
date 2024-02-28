@@ -19,7 +19,7 @@ alias cd_blog_template='cd ~/projects/blog/template'
 alias cd_blog_content='cd ~/projects/blog/content'
 
 # Final CDs
-alias cdc='cd ~/.dotfiles'
+alias cdc='cd ~/.dotfiles' # cd config
 alias cdr='cd "$(git rev-parse --show-toplevel || echo .)"' # cd root
 alias cdp='cd ~/projects'
 alias cdpn='cd ~/projects-not-mine'
@@ -30,5 +30,3 @@ alias cdtr='cd ~/tutorials/ruby'
 
 alias cdt='cd ~/tmp'
 alias cdtmp='cd ~/tmp'
-
-alias cde='cd ~/.dotfiles'

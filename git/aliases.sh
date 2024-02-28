@@ -57,4 +57,5 @@ alias gdo="git diff @{upstream}"
 # Open repository in SourceTree
 alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
 alias gx='gitx'
-alias gxe='open -a SourceTree ~/.dotfiles'
+# git x config = Open dotfiles in SourceTree
+alias gxc='open -a SourceTree ~/.dotfiles'
