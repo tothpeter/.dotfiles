@@ -37,6 +37,8 @@ alias gs='git status'
 alias gpf='git push -f'
 alias gpl='git pull origin $(git_current_branch)'
 alias gplr='git pull --rebase origin $(git_current_branch)'
+# Git pull force = overwrite local branch with its remote counterpart
+alias gplf='git reset origin/$(git_current_branch) --hard'
 # Pull master = update the local main branch, without the need to switch to it
 alias gplm='git fetch origin $(git_main_branch):$(git_main_branch)'
 # Discard all changes
