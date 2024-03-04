@@ -155,13 +155,13 @@
   },
   "log": {
     "scope": "javascript,typescript,vue",
-    "prefix": "l",
-    "body": ["console.log('----------------------');"]
+    "prefix": "p",
+    "body": ["console.log('----------------------')"]
   },
   "log2": {
     "scope": "javascript,typescript,vue",
-    "prefix": "p",
-    "body": ["console.log('----------------------');"]
+    "prefix": "pp",
+    "body": ["console.log('----------------------', ${0})"]
   },
   // "anonymous function": {
   //   "scope": "javascript,typescript,vue",
