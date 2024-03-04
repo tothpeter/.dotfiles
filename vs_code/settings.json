@@ -143,5 +143,10 @@
     "**/log": true
   },
   "workbench.editor.empty.hint": "hidden",
+  "cSpell.enabled": true,
+  "cSpell.userWords": [
+    "Silverfin",
+    "Unreview"
+  ],
   "workbench.activityBar.location": "hidden"
 }
