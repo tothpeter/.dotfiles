@@ -3,8 +3,9 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
+    // Run test file (AppleScript)
     {
-      "label": "run_rspec",
+      "label": "run_rspec_in_iterm2",
       "type": "shell",
       "command": "osascript",
       "args": [
@@ -16,8 +17,9 @@
         "focus": false
       }
     },
+    // Run test at cursor (Python)
     {
-      "label": "run_rspec_for_current_line",
+      "label": "run_rspec_at_cursor_in_iterm2",
       "type": "shell",
       "command": "~/.asdf/shims/python3",
       "args": [
@@ -29,9 +31,10 @@
         "focus": false
       }
     },
+    // Run test at cursor (AppleScript)
+    // Applescript in iTerm2 is deprecated
     {
-      // AppleScript
-      "label": "run_rspec_for_current_line_old",
+      "label": "run_rspec_at_cursor_in_iterm2_apple_script",
       "type": "shell",
       "command": "osascript",
       "args": [
