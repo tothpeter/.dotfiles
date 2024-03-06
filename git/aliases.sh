@@ -17,18 +17,18 @@ alias grb_fixups='git rebase -i --autosquash $(git_main_branch)'
 alias grbia='git rebase -i $(git_main_branch)'
 
 # Update = sync changes from the remote master to the current branch
-alias gupd='gplm ; grbm ; gfa'
+alias gupd='gplm && grbm && gfa'
 # Update iteratively
 alias gupdi='gplm && grbmi'
 # Update remote = sync changes from the current branch to its remote counterpart
-alias gupdr='gplm ; grbm ; gpf ; gfa'
+alias gupdr='gplm && grbm && gpf && gfa'
 
 # Commit for lazy devs like myself
 alias gc='git commit -m'
 # Fixup commit | brew install fzf
 alias gc_fixup="!git log -n 10 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 # Ammend all changes to the last commit
-alias gam='git add . ; git commit --amend --no-edit'
+alias gam='git add . && git commit --amend --no-edit'
 
 alias gl='git log --oneline --graph --all --decorate'
 # List the remotes
