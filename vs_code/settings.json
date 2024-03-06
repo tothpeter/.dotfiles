@@ -125,7 +125,7 @@
     "**/log": true
   },
   "workbench.editor.empty.hint": "hidden",
-  "cSpell.enabled": true,
+  "cSpell.enabled": false,
   "cSpell.userWords": [
     "Silverfin",
     "Unreview"
