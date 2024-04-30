@@ -1,4 +1,5 @@
 alias ec='code ~/.dotfiles' # Edit config
+alias eh='code $_history_file' # Edit history
 
 alias c='code .'
 alias o='open .' # Open current directory in finder
