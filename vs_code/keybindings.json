@@ -93,6 +93,10 @@
     "command": "extension.railsLatestMigration"
   },
   {
+    "key": "cmd+k cmd+q",
+    "command": "quote-swapper.swap-quotes"
+  },
+  {
     "key": "cmd+r cmd+t",
     "command": "workbench.action.tasks.runTask",
     "args": "run_rspec_at_cursor_in_iterm2",
