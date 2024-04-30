@@ -107,5 +107,10 @@
     "command": "workbench.action.tasks.runTask",
     "args": "run_rspec_in_iterm2",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
   }
 ]
