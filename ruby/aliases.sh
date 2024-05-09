@@ -41,6 +41,8 @@ alias rgmig='r generate migration'
 alias rgmod='r generate model'
 alias rgs='r generate scaffold'
 
+alias cop='rubocop'
+
 # Other
 
 # alias rest='pumactl restart'
