@@ -99,14 +99,20 @@
   {
     "key": "cmd+r cmd+t",
     "command": "workbench.action.tasks.runTask",
-    "args": "run_rspec_at_cursor_in_iterm2",
-    "when": "editorTextFocus"
+    "args": "run_rspec_line_in_iterm2",
+    "when": "editorTextFocus && resourceLangId == ruby"
   },
   {
     "key": "cmd+r t",
     "command": "workbench.action.tasks.runTask",
-    "args": "run_rspec_in_iterm2",
-    "when": "editorTextFocus"
+    "args": "run_rspec_file_in_iterm2",
+    "when": "editorTextFocus && resourceLangId == ruby"
+  },
+  {
+    "key": "cmd+r t",
+    "command": "workbench.action.tasks.runTask",
+    "args": "run_js_spec_file_in_iterm2",
+    "when": "editorTextFocus && resourceLangId == javascript"
   },
   {
     "key": "ctrl+down",

@@ -3,13 +3,30 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
-    // Run test file (AppleScript)
+    // Run the current line in RSpec (Python)
     {
-      "label": "run_rspec_in_iterm2",
+      "label": "run_rspec_line_in_iterm2",
+      "type": "shell",
+      "command": "~/.asdf/shims/python3", // Python binary
+      "args": [
+        "~/.dotfiles/iTerm/run_command.py",
+        "rs", // alias for rspec
+        "${relativeFile}:${lineNumber}"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "focus": false
+      }
+    },
+    // Run the current file in RSpec (AppleScript)
+    // Applescript in iTerm2 is deprecated
+    {
+      "label": "run_rspec_file_in_iterm2",
       "type": "shell",
       "command": "osascript",
       "args": [
-        "~/.dotfiles/iTerm/run_rspec.scpt",
+        "~/.dotfiles/iTerm/run_command.scpt",
+        "rs", // alias for rspec
         "${relativeFile}"
       ],
       "presentation": {
@@ -17,29 +34,15 @@
         "focus": false
       }
     },
-    // Run test at cursor (Python)
+    // Run the current file as a JS test (AppleScript)
     {
-      "label": "run_rspec_at_cursor_in_iterm2",
-      "type": "shell",
-      "command": "~/.asdf/shims/python3",
-      "args": [
-        "~/.dotfiles/iTerm/run_rspec.py",
-        "${relativeFile}:${lineNumber}"
-      ],
-      "presentation": {
-        "reveal": "never",
-        "focus": false
-      }
-    },
-    // Run test at cursor (AppleScript)
-    // Applescript in iTerm2 is deprecated
-    {
-      "label": "run_rspec_at_cursor_in_iterm2_apple_script",
+      "label": "run_js_spec_file_in_iterm2",
       "type": "shell",
       "command": "osascript",
       "args": [
-        "~/.dotfiles/iTerm/run_rspec.scpt",
-        "${relativeFile}:${lineNumber}"
+        "~/.dotfiles/iTerm/run_command.scpt",
+        "js_test", // alias for `yarn test`
+        "${relativeFile}"
       ],
       "presentation": {
         "reveal": "never",
