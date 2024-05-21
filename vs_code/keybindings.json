@@ -94,7 +94,7 @@
   },
   {
     "key": "cmd+k cmd+q",
-    "command": "quote-swapper.swap-quotes"
+    "command": "bracketeer.swapQuotes"
   },
   {
     "key": "cmd+r cmd+t",
