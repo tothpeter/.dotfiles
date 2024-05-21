@@ -163,13 +163,9 @@
     "prefix": "pp",
     "body": ["console.log('----------------------', ${0})"]
   },
-  // "anonymous function": {
-  //   "scope": "javascript,typescript,vue",
-  //   "prefix": "f",
-  //   "body": [
-  //     "function(${1:arguments}) {",
-  //     "\t${0}",
-  //     "}",
-  //   ]
-  // },
+  "log3": {
+    "scope": "javascript,typescript,vue",
+    "prefix": "pb", // print body
+    "body": ["console.log('----------------------', document.body.innerHTML)"]
+  },
 }
