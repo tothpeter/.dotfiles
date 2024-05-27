@@ -32,3 +32,16 @@ deactivate_screen_cast_env() {
   defaults write com.apple.dock tilesize -int $original_dock_size
   killall Dock
 }
+
+# Find alias using fuzy search then execute the selected one
+find_alias() {
+  # Capture the selected alias using fzf and awk
+  local selected_alias
+  selected_alias=$(alias | fzf | awk -F'=' '{print $1}')
+
+  # Execute the selected alias if there is one
+  if [ -n "$selected_alias" ]; then
+    echo "Executing: $selected_alias"
+    eval "$selected_alias"
+  fi
+}

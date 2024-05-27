@@ -249,8 +249,8 @@ gem install bundler
 ## Other tools
 
 ```bash
+brew install fzf
 brew install thefuck
-brew install direnv
 ```
 
 ### VLC
