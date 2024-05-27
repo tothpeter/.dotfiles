@@ -87,3 +87,5 @@ done
 # }
 
 # load_local_aliases
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
