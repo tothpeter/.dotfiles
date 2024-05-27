@@ -42,6 +42,7 @@ alias rgmod='r generate model'
 alias rgs='r generate scaffold'
 
 alias cop='rubocop'
+alias cop_fix='rubocop --autocorrect-all'
 
 # Other
 
