@@ -21,6 +21,7 @@ function r() {
 }
 
 alias rc='r console'
+alias rcs='r console --sandbox'
 alias routes='r routes'
 
 alias logd='tail -f log/development.log'
