@@ -11,7 +11,7 @@ alias grbi9='grbi HEAD~9'
 alias grbmi='EDITOR="code --wait" grbi main'
 
 # Squash fixup commits
-alias grb_fixups='git rebase -i --autosquash $(git_main_branch)'
+alias grb_fixup='git rebase -i --autosquash $(git_main_branch)'
 
 # Rebase all commits in the current branch iteratively
 alias grbia='git rebase -i $(git_main_branch)'
@@ -26,7 +26,7 @@ alias gupdr='gplm && grbm && gpf && gfa'
 # Commit for lazy devs like myself
 alias gc='git commit -m'
 # Fixup commit | brew install fzf
-alias gc_fixup="!git log -n 10 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+alias gc_fixup="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | awk \"{ print \$1 }\" | xargs -o git commit --fixup"
 # Ammend all changes to the last commit
 alias gam='git add . && git commit --amend --no-edit'
 
