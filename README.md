@@ -7,35 +7,45 @@ Tools and shortcuts I use to minimize manual work and maximize productivity.
 ### Command line tools
 
 ```bash
-# Git update: sync all changes from the remote repository
+# Git update - for feature branch workflow
+# To have all the changes from the remote main branch in my local main and local
+# current feature branch. It's best to work with the most recent version of the app.
+
+# Steps the script does:
 # - Pull all the changes to the local main branch from its remote counterpart
 # - Stash all the changes if there are any
 # - Rebase the current branch to the main branch
 # - Stash pop if we stashed changes before
-# - Remove all deleted remote branches.
+# - Remove all deleted remote branches
 $ gupd
 
 # Git: Discard all changes
 $ nah
 
-# Git X: Open the current Git repository in SourceTree. (even if the Git folder is several levels up)
+# Git X: Open the current Git repository in SourceTree.
+# (even if the Git folder is several levels up)
 $ gx
 
 # Git amend: Add all changes to the last commit. Very useful for TDD.
 $ gam
 
-# Git rebase interactive all: Starts an interactive rebase for all the commits on the current branch.
+# Git rebase interactive all: Starts an interactive rebase for all the commits
+# on the current branch.
 $ grbia
+
+# Git undo: Removes the last commit without losing its changes.
+$ gu
 
 # Git rebase fixups: squash all fixup commits into the right commits.
 $ grb_fixups
 ```
 
-### SourceTree custom actios
+### SourceTree custom actions
 
-#### Fixup commit to the selected commit
+#### Fixup commit for the selected commit
 
-Right click on a commit > Custom Actions > Fixup. It will create a fixup commit for the selected commit using the files added to staging.
+Right click on a commit > Custom Actions > Fixup. It will create a fixup commit
+for the selected commit using the files added to staging.
 
 Create a new SourceTree custom action
 - Menu caption: Fixup
@@ -44,7 +54,8 @@ Create a new SourceTree custom action
 
 #### Ammend all changes to the selected commit
 
-Right click on a commit > Custom Actions > Amend ALL (autosquash). It will ammend all the changes to the selected commit.
+Right click on a commit > Custom Actions > Amend ALL (autosquash). It will ammend
+all the changes to the selected commit.
 
 !!!IMPORTANT!!!: This will squash all the existing fixup commits respectively.
 
@@ -55,7 +66,8 @@ SourceTree custom action settings:
 
 #### Super secret stuff
 
-Put any custom variables.sh, aliases.sh, functions.sh or .rb in the `local` folder and they will be loaded automatically and recursively.
+Put any custom variables.sh, aliases.sh, functions.sh or .rb in the `local`
+folder and they will be loaded automatically and recursively.
 
 ### Run the current RSpec file or example in the current iTerm2 tab from VS Code by pressing a keystroke
 
