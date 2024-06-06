@@ -5,8 +5,8 @@
 # !!!IMPORTANT!!!: This will squash all the existing fixup commits respectively.
 
 # SourceTree custom action settings:
-# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit_then_rebase.sh
 # Menu caption: Amend ALL (autosquash)
+# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit_then_rebase.sh
 # Parameters: $SHA
 
 git_main_branch () {

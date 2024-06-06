@@ -4,8 +4,8 @@
 # to the selected commit.
 
 # SourceTree custom action settings:
-# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit.sh
 # Menu caption: Fixup
+# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit.sh
 # Parameters: $SHA
 
 git commit --fixup $1

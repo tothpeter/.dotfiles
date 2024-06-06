@@ -5,8 +5,8 @@
 # !!!IMPORTANT!!!: This will squash all the existing fixup commits respectively.
 
 # SourceTree custom action settings:
-# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_staged_changes_to_commit_with_autosquash.sh
 # Menu caption: Amend staged (autosquash)
+# Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_staged_changes_to_commit_with_autosquash.sh
 # Parameters: $SHA
 
 git_main_branch () {
