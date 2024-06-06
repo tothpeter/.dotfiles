@@ -147,7 +147,7 @@ Add the following to your VS Code settings.json:
 
 ```bash
 git clone git@github.com:tothpeter/dotfiles.git
-mv ~/dotenv ~/.dotenv
+mv ~/dotfiles ~/.dotfiles
 # Homebrew https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
