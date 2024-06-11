@@ -22,7 +22,7 @@ $ gupd
 # Git: Discard all changes
 $ nah
 
-# Git X: Open the current Git repository in SourceTree.
+# GitX: Open the current Git repository in SourceTree. (don't ask why I associate GitX with SourceTree)
 # (even if the Git folder is several levels up)
 $ gx
 

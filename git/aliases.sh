@@ -8,7 +8,7 @@ alias grbi8='grbi HEAD~8'
 alias grbi9='grbi HEAD~9'
 
 # Rebase to master iteratively
-alias grbmi='EDITOR="code --wait" grbi main'
+alias grbmi='grbi main'
 
 # Squash fixup commits
 alias grb_fixup='git rebase -i --autosquash $(git_main_branch)'
@@ -37,7 +37,7 @@ alias gs='git status'
 alias gpf='git push -f'
 alias gpl='git pull'
 alias gplr='git pull --rebase origin $(git_current_branch)'
-# Git pull force = overwrite local branch with its remote counterpart
+# Pull force = overwrite local branch with its remote counterpart
 alias gplf='git reset origin/$(git_current_branch) --hard'
 # Pull master = update the local main branch, without the need to switch to it
 alias gplm='git fetch origin $(git_main_branch):$(git_main_branch)'
@@ -46,16 +46,15 @@ alias nah='git reset --hard && git clean -df'
 # Undo = removes the last commit while keeping its changes
 alias gu="git reset --soft 'HEAD^'"
 
-# Git checkout back to the previous branch
+# Checkout back to the previous branch
 alias gchb="git checkout -"
 
-# Git diff remote
+# Diff remote
 alias gdr="git diff @{upstream}"
-# Git diff origin
+# Diff origin
 alias gdo="git diff @{upstream}"
 
-# Open repository in SourceTree
-alias gitx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
-alias gx='gitx'
-# git x config = Open dotfiles in SourceTree
+# GitX: Open repository in SourceTree (don't ask why I associate GitX with SourceTree)
+alias gx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
+# GitX config: Open the current Git repository in SourceTree
 alias gxc='open -a SourceTree ~/.dotfiles'
