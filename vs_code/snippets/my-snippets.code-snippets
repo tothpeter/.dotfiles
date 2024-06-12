@@ -22,6 +22,41 @@
     "prefix": "p",
     "body": ["p '-------------------------------'"]
   },
+  "print spearator line 1": {
+    "scope": "ruby",
+    "prefix": "p1",
+    "body": ["p '-------------------------------1'"]
+  },
+  "print spearator line 0": {
+    "scope": "ruby",
+    "prefix": "p0",
+    "body": ["p '-------------------------------0'"]
+  },
+  "print spearator line 2": {
+    "scope": "ruby",
+    "prefix": "p2",
+    "body": ["p '-------------------------------2'"]
+  },
+  "print spearator line 3": {
+    "scope": "ruby",
+    "prefix": "p3",
+    "body": ["p '-------------------------------3'"]
+  },
+  "print spearator line 4": {
+    "scope": "ruby",
+    "prefix": "p4",
+    "body": ["p '-------------------------------4'"]
+  },
+  "print spearator line 5": {
+    "scope": "ruby",
+    "prefix": "p5",
+    "body": ["p '-------------------------------5'"]
+  },
+  "print spearator line 6": {
+    "scope": "ruby",
+    "prefix": "p6",
+    "body": ["p '-------------------------------6'"]
+  },
   "print line": {
     "scope": "ruby",
     "prefix": "pp",
