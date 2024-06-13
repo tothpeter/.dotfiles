@@ -13,18 +13,17 @@ alias rel="reload"
 # Remove directory
 alias rmd="rm -rf"
 
-# Temp CDs
-alias cdw='cd ~/projects/silverfin/silverfin'
-alias cdk='cd ~/projects/mine/kickstarter-clone'
+alias cdw='cd ~/project-silverfin/web' # cd work
 alias cd_blog='cd ~/projects/blog'
 alias cd_blog_template='cd ~/projects/blog/template'
 alias cd_blog_content='cd ~/projects/blog/content'
 
-# Final CDs
 alias cdc='cd ~/.dotfiles' # cd config
+alias cdcl='cd ~/.dotfiles/local' # cd config local
+alias cdp='cd ~/projects' # Projects I'm currently working on
+alias cdpm='cd ~/projects-mine' # Projects I'm not actively working on
+alias cdpn='cd ~/projects-not-mine' # Gems etc
 alias cdr='cd "$(git rev-parse --show-toplevel || echo .)"' # cd root
-alias cdp='cd ~/projects'
-alias cdpn='cd ~/projects-not-mine'
 
 alias cdtu='cd ~/tutorials'
 alias cdtj='cd ~/tutorials/js'
