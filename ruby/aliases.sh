@@ -22,7 +22,11 @@ function r() {
 
 alias rc='r console'
 alias rcs='r console --sandbox'
+
 alias routes='r routes'
+alias rrs='r routes > tmp/routes.txt' # Rails routes sync
+alias rr='cat tmp/routes.txt' # Rails routes
+alias rrf='rr | fzf' # Rails routes fuzzy search
 
 alias logd='tail -f log/development.log'
 alias logt='tail -f log/test.log'
