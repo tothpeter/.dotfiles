@@ -305,3 +305,16 @@ brew install thefuck
 mv -v ~/Library/Preferences/org.videolan.vlc/vlcrc ~/.dotfiles/others/vlc/vlcrc
 ln -s ~/.dotfiles/others/vlc/vlcrc ~/Library/Preferences/org.videolan.vlc/vlcrc
 ```
+## OSX Shortcuts
+
+To check what we have:
+
+```
+defaults read -g NSUserKeyEquivalents
+```
+
+### Merge All Windows shortcut for all apps (cmd+shift+m)
+
+```
+defaults write -g NSUserKeyEquivalents -dict-add "Merge All Windows" -string '@$m'
+```
