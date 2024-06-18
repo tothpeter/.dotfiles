@@ -35,7 +35,7 @@ alias logt='tail -f log/test.log'
 alias mig='r db:migrate'
 alias migt='RAILS_ENV=test r db:migrate'
 
-alias rollb_normal='r db:rollback'
+# alias rollb_normal='r db:rollback'
 
 alias rollbt='RAILS_ENV=test r db:rollback'
 
