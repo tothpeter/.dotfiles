@@ -44,7 +44,7 @@ $ grb_fixups
 
 #### Fixup commit for the selected commit
 
-Right click on a commit > Custom Actions > Fixup. It will create a fixup commit
+In SourceTree: Right click on a commit > Custom Actions > Fixup. It will create a fixup commit
 for the selected commit using the files added to staging.
 
 Create a new SourceTree custom action
@@ -52,22 +52,20 @@ Create a new SourceTree custom action
 - Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit.sh
 - Parameters: $SHA
 
-#### Ammend all changes to the selected commit
+#### Amend all changes to the selected commit
 
-Right click on a commit > Custom Actions > Amend ALL (autosquash). It will ammend
+In SourceTree: Right click on a commit > Custom Actions > Amend all. It will amend
 all the changes to the selected commit.
 
-!!!IMPORTANT!!!: This will squash all the existing fixup commits respectively.
-
 SourceTree custom action settings:
-- Menu caption: Amend ALL (autosquash)
-- Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit_then_rebase.sh
+- Menu caption: Amend all
+- Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_all.sh
 - Parameters: $SHA
 
 #### Super secret stuff
 
 Put any custom variables.sh, aliases.sh, functions.sh or .rb in the `local`
-folder and they will be loaded automatically and recursively.
+folder and they will be loaded recursively.
 
 ### Run the current RSpec file or example in the current iTerm2 tab from VS Code by pressing a keystroke
 
