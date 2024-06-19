@@ -9,21 +9,6 @@
 # Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_staged_changes_to_commit_with_autosquash.sh
 # Parameters: $SHA
 
-git_main_branch () {
-	command git rev-parse --git-dir &> /dev/null || return
-	local ref
-	for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk,mainline,default,master}
-	do
-		if command git show-ref -q --verify $ref
-		then
-			echo ${ref:t}
-			return 0
-		fi
-	done
-	echo master
-	return 1
-}
-
 git commit --fixup $1
 
 # Check if there are any changes to stash
@@ -33,7 +18,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 # Rebase with autosquash without opening the editor
-GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $(git_main_branch)
+GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $1^
 
 # Pop the last stash if we stashed changes previously
 if [ "$changes_stashed" = true ]; then
