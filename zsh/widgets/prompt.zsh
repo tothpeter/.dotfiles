@@ -15,6 +15,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-changes
      git status --porcelain | grep -E -q '^ ?(M|A|D|R|C|\?)' &>/dev/null
   then
     hook_com[misc]='*'
+  else
+    hook_com[misc]=''
   fi
 }
 
