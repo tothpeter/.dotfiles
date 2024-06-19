@@ -73,9 +73,6 @@ for file in $DOTFILES/local/**/*.sh ; do
   source $file
 done
 
-# Load .localrc for SUPER SECRET STUFF
-[[ -a $DOTFILES/.localrc ]] && source $DOTFILES/.localrc
-
 # Load aliases based on the current directory
 # Alternative: https://swapoff.org/ondir.html
 
