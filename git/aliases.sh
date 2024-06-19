@@ -58,6 +58,7 @@ alias gdo="git diff @{upstream}"
 alias gx='open -a SourceTree $(git rev-parse --show-toplevel || echo .)'
 alias gxc='open -a SourceTree ~/.dotfiles' # GitX config local
 alias gxcl='open -a SourceTree ~/.dotfiles/local' # GitX config local
+alias gxl='lazygit'
 
 alias gpc='git -C ~/.dotfiles push' # Git push config
 alias gpcl='git -C ~/.dotfiles/local push' # Git push config local
