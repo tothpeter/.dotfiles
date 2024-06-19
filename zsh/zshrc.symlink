@@ -16,7 +16,7 @@ export DOTFILES=$HOME/.dotfiles
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 plugins=(git zsh-syntax-highlighting)
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 
 # Zsh History
@@ -65,6 +65,8 @@ _my_files=($_my_variables $_my_aliases $_my_functions $_my_widgets)
 for file in ${_my_files} ; do
   source $file
 done
+
+source $DOTFILES/zsh/widgets/prompt.zsh
 
 # Load the local untracked extensions and overwrites
 for file in $DOTFILES/local/**/*.sh ; do
