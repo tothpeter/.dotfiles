@@ -73,21 +73,4 @@ for file in $DOTFILES/local/**/*.sh ; do
   source $file
 done
 
-# Load aliases based on the current directory
-# Alternative: https://swapoff.org/ondir.html
-
-# load_local_aliases () {
-#   case $PWD in
-#     /Users/peter/projects/bount/web*) source ~/.aliases.bount.sh;;
-#     /Users/peter/projects/mine/kickstarter-clone*) source ~/.aliases.kickstarter-clone.sh;;
-#     # *) echo $PWD;;
-#   esac
-# }
-
-# chpwd () {
-#   load_local_aliases
-# }
-
-# load_local_aliases
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
