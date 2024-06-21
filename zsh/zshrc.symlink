@@ -35,18 +35,6 @@ source $ZSH/oh-my-zsh.sh
 asdf_sh_path="$(brew --prefix asdf)/libexec/asdf.sh"  # (homebrew install)
 [[ -s $asdf_sh_path ]] && source $asdf_sh_path
 
-
-# Enable `thefuck` if available
-# if command -v thefuck >/dev/null ; then
-# 	eval $(thefuck --alias)
-# fi
-
-# Enable `direnv` if available
-if command -v direnv >/dev/null ; then
-	eval "$(direnv hook zsh)"
-fi
-
-
 # Load all of my aliases and shortcuts
 typeset -U _my_variables
 _my_variables=($DOTFILES/**/variables.sh)

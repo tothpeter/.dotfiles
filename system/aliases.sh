@@ -3,7 +3,6 @@ alias eh='code $_history_file' # Edit history
 
 alias c='code .'
 alias o='open .' # Open current directory in finder
-alias f='fuck' # It was not me
 alias http_server='python -m SimpleHTTPServer 8000'
 
 # Reload the shell (i.e. invoke as a login shell)
