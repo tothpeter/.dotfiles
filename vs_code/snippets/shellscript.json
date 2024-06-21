@@ -1,0 +1,14 @@
+{
+	"print spearator line": {
+		"prefix": "p",
+    "body": ["echo '-------------------------------'"]
+  },
+	"debug puts": {
+		"prefix": "pd",
+		"body": ["echo \"${1}: $${1}\""],
+  },
+	"debug puts2": {
+		"prefix": "pp",
+		"body": ["echo \"${1}: $${1}\""],
+  },
+}
