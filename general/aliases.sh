@@ -6,8 +6,7 @@ alias o='open .' # Open current directory in finder
 alias http_server='python -m SimpleHTTPServer 8000'
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
-alias rel="reload"
+alias rel="exec $SHELL -l"
 
 # Remove directory
 alias rmd="rm -rf"
@@ -33,5 +32,19 @@ alias cdtr='cd ~/tutorials/ruby'
 alias cdt='cd ~/tmp'
 alias cdtmp='cd ~/tmp'
 
-alias t='tmux'
-alias ta='tmux a'
+alias tm='tmux'
+alias tma='tmux a'
+
+
+alias backup_vlc_config='mv -v ~/Library/Preferences/org.videolan.vlc/vlcrc ~/.dotfiles/others/vlc/vlcrc && ln -s ~/.dotfiles/others/vlc/vlcrc ~/Library/Preferences/org.videolan.vlc/vlcrc'
+alias apply_vlc_config_from_dotfiles='rmd ~/Library/Preferences/org.videolan.vlc/vlcrc ; ln -s ~/.dotfiles/others/vlc/vlcrc ~/Library/Preferences/org.videolan.vlc/vlcrc'
+
+alias k='kubectl'
+alias k_logs='kubectl logs -f'
+alias k_get='kubectl get'
+alias k_pods='kubectl get pods'
+
+alias ng='ngrok http 3000' # opens an Ngrok tunnel to the local dev env
+
+alias s='./start'
+alias t='zsh ./test'
