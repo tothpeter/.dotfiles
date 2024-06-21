@@ -77,11 +77,6 @@
     "prefix": "d",
     "body": ["require 'debug'", "debugger"]
   },
-  "debugger": {
-    "scope": "ruby",
-    "prefix": "dd",
-    "body": ["debugger"]
-  },
   "debugger pry": {
     "scope": "ruby",
     "prefix": "dp",
