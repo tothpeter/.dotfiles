@@ -20,4 +20,4 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-changes
   fi
 }
 
-PROMPT='%F{blue}%1~%f ${vcs_info_msg_0_}❯ '
+PROMPT='%F{blue}%1~%f %F{gray}${vcs_info_msg_0_}%f%F{yello}❯%f '
