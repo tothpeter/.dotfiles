@@ -295,6 +295,9 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install # To install key bindings to iTerm and fuzzy completion
 
 brew install thefuck
+
+# Local Sherpa
+git clone git@github.com:tothpeter/local_sherpa.git ~/.dotfiles/lib/local_sherpa
 ```
 
 ### VLC

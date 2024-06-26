@@ -46,5 +46,7 @@ alias k_pods='kubectl get pods'
 
 alias ng='ngrok http 3000' # opens an Ngrok tunnel to the local dev env
 
-alias s='./start'
-alias t='zsh ./test'
+alias se='sherpa edit'
+alias st='sherpa trust'
+
+alias upgrade_sherpa='git -C $DOTFILES/lib/local_sherpa pull'
