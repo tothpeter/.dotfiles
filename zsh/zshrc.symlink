@@ -61,6 +61,9 @@ for file in $DOTFILES/local/**/*.sh ; do
   source $file
 done
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+include () {
+  [ -f "$1" ] && source "$1"
+}
 
-source $DOTFILES/lib/local_sherpa/lib/init.zsh
+include ~/.fzf.zsh
+include $DOTFILES/lib/local_sherpa/lib/init.zsh
