@@ -6,7 +6,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '*'
-zstyle ':vcs_info:git:*' formats '%b%m '
+zstyle ':vcs_info:git:*' formats '[%b%m] '
 zstyle ':vcs_info:git:*' actionformats '%12.12i|%a%m '
 zstyle ':vcs_info:git*+set-message:*' hooks git-changes
 
@@ -20,4 +20,4 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-changes
   fi
 }
 
-PROMPT='%F{blue}%1~%f %F{gray}${vcs_info_msg_0_}%f%F{yello}❯%f '
+PROMPT='%F{blue}%1~%f %F{red}${vcs_info_msg_0_}%f❯ '
