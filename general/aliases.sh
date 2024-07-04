@@ -1,5 +1,7 @@
 alias ec='code ~/.dotfiles' # Edit config
 alias eh='code $_history_file' # Edit history
+alias erh='code ~/.irb_history' # Edit Rails history
+alias ehr='code ~/.irb_history' # Edit history Rails
 
 alias c='code .'
 alias o='open .' # Open current directory in finder
