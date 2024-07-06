@@ -12,3 +12,5 @@
 .byebug_history
 
 .local-sherpa
+
+/lib/generators

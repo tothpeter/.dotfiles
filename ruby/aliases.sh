@@ -42,6 +42,7 @@ alias rollbt='RAILS_ENV=test r db:rollback'
 alias seed='r db:seed'
 
 alias rg='r generate'
+alias rgs='r generate service'
 alias rgc='r generate controller'
 alias rgmig='r generate migration'
 alias rgmod='r generate model'
