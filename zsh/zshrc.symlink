@@ -66,4 +66,8 @@ include () {
 }
 
 include ~/.fzf.zsh
-include $DOTFILES/lib/local_sherpa/lib/init.zsh
+
+zle -N find_alias
+bindkey '^a' 'find_alias'
+
+include $DOTFILES/lib/local_sherpa/lib/init.sh
