@@ -137,5 +137,6 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "hidden"
 }
