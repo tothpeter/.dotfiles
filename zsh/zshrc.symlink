@@ -54,7 +54,7 @@ for file in ${_my_files} ; do
   source $file
 done
 
-source $DOTFILES/zsh/widgets/prompt.zsh
+source $DOTFILES/zsh/prompt.zsh
 
 # Load the local untracked extensions and overwrites
 for file in $DOTFILES/local/**/*.sh ; do
