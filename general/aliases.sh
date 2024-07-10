@@ -53,3 +53,4 @@ alias se='sherpa edit'
 alias st='sherpa trust'
 
 alias upgrade_sherpa='git -C $DOTFILES/lib/local_sherpa pull'
+alias upgrade_sherpa_f='git -C $DOTFILES/lib/local_sherpa reset origin/main --hard'
