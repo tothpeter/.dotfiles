@@ -5,7 +5,7 @@ grbm() {
   # Check if there are any changes to stash
   if [ -n "$(git status --porcelain)" ]; then
     git stash push --include-untracked
-    changes_stashed=true
+    local changes_stashed=true
   fi
 
   # Rebasing the current branch to the main branch
