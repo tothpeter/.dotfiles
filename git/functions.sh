@@ -1,4 +1,5 @@
-# It rebases the current branch to the main branch even if there are uncommitted changes
+# Git rebase master/main
+# Rebase the current branch to the master/main even if there are uncommitted changes
 unalias grbm
 grbm() {
   # Check if there are any changes to stash
@@ -16,8 +17,9 @@ grbm() {
   fi
 }
 
-# Rebase the last N commits iteratively
-# Example: grbi 3 # Rebase the last 3 commits
+# Git rebase interactive N
+# Rebase the last N commits interactively
+# $ grbin 11 # Rebase the last 11 commits
 grbin() {
   grbi "HEAD~$1"
 }
