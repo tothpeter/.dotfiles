@@ -27,11 +27,11 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-changes
 
   hook_com[misc]=''
 
-  # Do we have a picked commit?
-  picked_commit_line=$(git status | sed -n '3p')
-  if [[ $picked_commit_line =~ ^[[:space:]]*pick ]]; then
-    # Add the picked commit message to the prompt
-    commit_message=${picked_commit_line:19}
+  # Include the commit subject in the prompt where we paused during the interactive rebase
+  commit_line=$(git status | sed -n '3p')
+  pattern='^[[:space:]]*(edit|pick)[[:space:]][[:alnum:]]*[[:space:]]'
+  if [[ $commit_line =~ $pattern ]]; then
+    commit_message=$(echo "$commit_line" | sed -E "s/$pattern//")
     hook_com[misc]="$commit_message"
     return
   fi
