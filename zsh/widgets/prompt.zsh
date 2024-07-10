@@ -1,22 +1,44 @@
+# This generates the following prompt:
+# - When in a Git repository:
+#   - Normal mode: "{top-level-directory} [{git-branch}] ❯ "
+#     - For example: "dotfiles [main] ❯ "
+#     - It also adds a star after the branch name if there is any change
+#   - Interactive rebase mode: "{top-level-directory} rebase-i > {target-sha} | {picked-commit-name} ❯ "
+#     - For example: "dotfiles rebase-i > 1234567890 | Fix typo in README ❯ "
+# - When not in a Git repository:
+#   - "{top-level-directory} ❯ "
+#     - For example: "awesome-project ❯ "
+
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
 # Define format for Git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' get-revision true
-zstyle ':vcs_info:*' unstagedstr '*'
-zstyle ':vcs_info:*' stagedstr '*'
+zstyle ':vcs_info:*' unstagedstr '*' # Add star after the branch name if there are unstaged changes
+zstyle ':vcs_info:*' stagedstr '*' # Add star after the branch name if there are staged changes
 zstyle ':vcs_info:git:*' formats '[%b%m] '
-zstyle ':vcs_info:git:*' actionformats '%12.12i|%a%m '
+zstyle ':vcs_info:git:*' actionformats '%a > %10.10i | %m '
 zstyle ':vcs_info:git*+set-message:*' hooks git-changes
 
 +vi-git-changes() {
-  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-     git status --porcelain | grep -E -q '^ ?(M|A|D|R|C|\?)' &>/dev/null
-  then
-    hook_com[misc]='*'
-  else
-    hook_com[misc]=''
+  # Skip if not in a Git repository
+  [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] || return
+
+  hook_com[misc]=''
+
+  # Do we have a picked commit?
+  picked_commit_line=$(git status | sed -n '3p')
+  if [[ $picked_commit_line =~ ^[[:space:]]*pick ]]; then
+    # Add the picked commit message to the prompt
+    commit_message=${picked_commit_line:19}
+    hook_com[misc]="$commit_message"
+    return
+  fi
+
+  # Do we have any changes?
+  if git status --porcelain | grep -E -q '^ ?(M|A|D|R|C|\?)' &>/dev/null; then
+    hook_com[misc]='*' # Add star after the branch name if there are changes
   fi
 }
 
