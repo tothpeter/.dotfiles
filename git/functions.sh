@@ -23,3 +23,11 @@ grbm() {
 grbin() {
   grbi "HEAD~$1"
 }
+
+# Git diff remote
+# This filters out the changes that other contributors have made that
+# I don't care about! Which comes handy after a hairy rebase.
+gdr() {
+  local urrent_branch=$(git_current_branch)
+  git diff origin/$urrent_branch $urrent_branch -- $(git diff master $urrent_branch --name-only)
+}

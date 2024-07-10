@@ -49,8 +49,6 @@ alias gu="git reset --soft 'HEAD^'"
 # Checkout back to the previous branch
 alias gchb="git checkout -"
 
-# Diff remote
-alias gdr="git diff @{upstream}"
 # Diff origin
 alias gdo="git diff @{upstream}"
 
