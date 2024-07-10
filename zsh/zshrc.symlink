@@ -70,4 +70,12 @@ include ~/.fzf.zsh
 zle -N find_alias
 bindkey '^a' 'find_alias'
 
-include $DOTFILES/lib/local_sherpa/lib/init.sh
+alias use_sherpa_dev_version="mkdir -p ~/.config/local_sherpa && touch ~/.config/local_sherpa/use_dev_version"
+alias use_sherpa_prod_version="rm -f ~/.config/local_sherpa/use_dev_version"
+
+if [[ -f "$HOME/.config/local_sherpa/use_dev_version" ]]; then
+  export USE_SHERPA_DEV_VERSION=true
+  include ~/projects/local_sherpa/lib/init.sh
+else
+  include $DOTFILES/lib/local_sherpa/lib/init.sh
+fi
