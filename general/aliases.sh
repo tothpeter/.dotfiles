@@ -21,6 +21,7 @@ alias cd_blog_content='cd ~/projects/blog/content'
 alias cdc='cd ~/.dotfiles' # cd config
 alias cdcl='cd ~/.dotfiles/local' # cd config local
 alias cdp='cd ~/projects' # Projects I'm currently working on
+alias cds='cd ~/projects/local_sherpa'
 alias cdp1='cd ~/projects/local_sherpa' # Current project I'm currently working on
 alias cdp2='cd ~/projects/vs_code_plugins/rails-generate' # Current project I'm currently working on
 alias cdpm='cd ~/projects-mine' # Projects I'm not actively working on
