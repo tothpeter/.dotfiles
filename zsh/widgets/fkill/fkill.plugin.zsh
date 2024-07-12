@@ -1,7 +1,7 @@
 # Use fzf to kill proccesses
 
 fkill_widget() {
-  sh $DOTFILES/zsh/widgets/fkill/script
+  sh $DOTFILES_PATH/zsh/widgets/fkill/script
   zle reset-prompt
 }
 

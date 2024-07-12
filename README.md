@@ -219,7 +219,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ### Setup local secrets
 
 ```bash
-touch $DOTFILES/.localrc
+touch $DOTFILES_PATH/local/localrc.sh
 ```
 
 ## Git

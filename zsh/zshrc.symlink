@@ -5,22 +5,19 @@
 # - https://github.com/holman/dotfiles
 
 # Paths and Variables
-export ZSH=$HOME/.oh-my-zsh
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export _dropbox_path="/Volumes/DriveD/Dropbox"
+export DOTFILES_PATH=$HOME/.dotfiles
 
-export DOTFILES=$HOME/.dotfiles
+_zsh_path=$HOME/.oh-my-zsh
+_dropbox_path="/Volumes/DriveD/Dropbox"
 
 # Zsh Settings
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 plugins=(git zsh-syntax-highlighting)
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 
-# Zsh History
-# (Save History to Dropbox if already set up)
+# Zsh history
+# Save it to Dropbox if it is set up
 _history_file="$_dropbox_path/work/system/.zsh_history"
 [[ -f $_history_file ]] && export HISTFILE=$_history_file
 
@@ -35,24 +32,24 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries before unique ones when trimming history
 
 # Load Oh-My-Zsh
-source $ZSH/oh-my-zsh.sh
+source $_zsh_path/oh-my-zsh.sh
 
 # asdf config
-asdf_sh_path="$(brew --prefix asdf)/libexec/asdf.sh"  # (homebrew install)
+asdf_sh_path="$(brew --prefix asdf)/libexec/asdf.sh" # (homebrew install)
 [[ -s $asdf_sh_path ]] && source $asdf_sh_path
 
 # Load all of my aliases and shortcuts
 typeset -U _my_variables
-_my_variables=($DOTFILES/**/variables.sh)
+_my_variables=($DOTFILES_PATH/**/variables.sh)
 
 typeset -U _my_aliases
-_my_aliases=($DOTFILES/**/aliases.sh)
+_my_aliases=($DOTFILES_PATH/**/aliases.sh)
 
 typeset -U _my_functions
-_my_functions=($DOTFILES/**/functions.sh)
+_my_functions=($DOTFILES_PATH/**/functions.sh)
 
 typeset -U _my_widgets
-_my_widgets=($DOTFILES/zsh/widgets/**/*.plugin.zsh)
+_my_widgets=($DOTFILES_PATH/zsh/widgets/**/*.plugin.zsh)
 
 _my_files=($_my_variables $_my_aliases $_my_functions $_my_widgets)
 
@@ -60,10 +57,10 @@ for file in ${_my_files} ; do
   source $file
 done
 
-source $DOTFILES/zsh/prompt.zsh
+source $DOTFILES_PATH/zsh/prompt.zsh
 
-# Load the local untracked extensions and overwrites
-for file in $DOTFILES/local/**/*.sh ; do
+# Load super secret stuff
+for file in $DOTFILES_PATH/local/**/*.sh ; do
   source $file
 done
 
@@ -83,5 +80,5 @@ if [[ -f "$HOME/.config/local_sherpa/use_dev_version" ]]; then
   export USE_SHERPA_DEV_VERSION=true
   include ~/projects/local_sherpa/lib/init.sh
 else
-  include $DOTFILES/lib/local_sherpa/lib/init.sh
+  include $DOTFILES_PATH/lib/local_sherpa/lib/init.sh
 fi
