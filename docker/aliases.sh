@@ -7,3 +7,5 @@ alias con='de /bin/bash'
 alias up="docker-compose up -d"
 alias upb="docker-compose up --build -d"
 alias down="docker-compose down"
+
+alias tmp_ubuntu="docker run --rm -it ubuntu"
