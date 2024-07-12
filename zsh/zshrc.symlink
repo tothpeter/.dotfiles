@@ -26,7 +26,13 @@ _history_file="$_dropbox_path/work/system/.zsh_history"
 
 export HISTSIZE=50000
 export SAVEHIST=$HISTSIZE
-setopt INC_APPEND_HISTORY
+setopt INC_APPEND_HISTORY # Don't wait until the shell exits to append to the history file
+setopt HIST_FIND_NO_DUPS # When searching for history entries, show matching lines once
+setopt HIST_IGNORE_ALL_DUPS # Remove duplicates before adding a new entry
+setopt HIST_IGNORE_SPACE # Don't save commands starting with a space
+setopt HIST_IGNORE_DUPS # Don't save the command if it was just run
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries before unique ones when trimming history
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
