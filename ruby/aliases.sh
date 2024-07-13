@@ -24,10 +24,9 @@ alias rc='r console'
 alias rcs='r console --sandbox'
 
 alias routes='r routes'
-alias rrs='r routes > tmp/routes.txt' # Rails routes sync
+alias rr_update='r routes > tmp/routes.txt' # Rails routes update
 alias rr='cat tmp/routes.txt' # Rails routes
-alias rrf='rr | fzf' # Rails routes fuzzy search
-alias rrs='rr | fzf' # Rails routes search
+alias rrf='rr | fzf' # Rails routes find (fuzzy search)
 
 alias logd='tail -f log/development.log'
 alias logt='tail -f log/test.log'
