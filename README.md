@@ -6,24 +6,24 @@ Tools and shortcuts I use to minimize manual work and maximize productivity.
 
 ### Command line tools
 
-```bash
+```shell
 # Git update - for feature branch workflow
-# To have all the changes from the remote main branch in my local main and local
-# current feature branch. It's best to work with the most recent version of the app.
+# Update the current Git branch with changes from the upstream main branch.
+# It's best to work with the most recent version of the app.
 
-# Steps the script does:
-# - Pull all the changes to the local main branch from its remote counterpart
-# - Stash all the changes if there are any
-# - Rebase the current branch to the main branch
-# - Stash pop if we stashed changes before
-# - Remove all deleted remote branches
+# Steps it follows:
+# - Pulls the latest changes to the local main branch from its remote counterpart
+# - Stashes all the changes if there are any
+# - Rebases the current branch to main
+# - Pulls the changes back from the stash if we stashed before
+# - Prunes the deleted remote branches
 $ gupd
 
 # Git: Discard all changes
 $ nah
 
 # GitX: Open the current Git repository in SourceTree. (don't ask why I associate GitX with SourceTree)
-# (even if the Git folder is several levels up)
+# It works even if the Git folder is several levels up.
 $ gx
 
 # Git amend: Add all changes to the last commit. Very useful for TDD.
@@ -40,34 +40,11 @@ $ gu
 $ grb_fixups
 ```
 
-### SourceTree custom actions
+### Super secret stuff
 
-#### Fixup commit for the selected commit
+Put any *.sh file into the folder named `local` and they will be loaded recursively.
 
-In SourceTree: Right click on a commit > Custom Actions > Fixup. It will create a fixup commit
-for the selected commit using the files added to staging.
-
-Create a new SourceTree custom action
-- Menu caption: Fixup
-- Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit.sh
-- Parameters: $SHA
-
-#### Amend all changes to the selected commit
-
-In SourceTree: Right click on a commit > Custom Actions > Amend all. It will amend
-all the changes to the selected commit.
-
-SourceTree custom action settings:
-- Menu caption: Amend all
-- Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_all.sh
-- Parameters: $SHA
-
-#### Super secret stuff
-
-Put any custom variables.sh, aliases.sh, functions.sh or .rb in the `local`
-folder and they will be loaded recursively.
-
-### Run the current RSpec file or example in the current iTerm2 tab from VS Code by pressing a keystroke
+### Run the active RSpec file or example in the current iTerm2 tab from VS Code by pressing a keystroke
 
 Add the following tasks to your VS Code tasks.json:
 
@@ -81,7 +58,7 @@ The scripts are in this repo, don't forget to copy them and change the path in t
   "command": "~/.asdf/shims/python3", // Python binary
   "args": [
     "~/.dotfiles/iTerm/run_command.py",
-    "rs", // alias for rspec
+    "rspec",
     "${relativeFile}:${lineNumber}"
   ],
   "presentation": {
@@ -97,7 +74,7 @@ The scripts are in this repo, don't forget to copy them and change the path in t
   "command": "osascript",
   "args": [
     "~/.dotfiles/iTerm/run_command.scpt",
-    "rs", // alias for rspec
+    "rspec",
     "${relativeFile}"
   ],
   "presentation": {
@@ -153,9 +130,32 @@ Add the following to your VS Code settings.json:
 }
 ```
 
+### SourceTree custom actions
+
+#### Fixup commit for the selected commit
+
+In SourceTree: Right click on a commit > Custom Actions > Fixup. It will create a fixup commit
+for the selected commit using the files added to staging.
+
+Create a new SourceTree custom action
+- Menu caption: Fixup
+- Script to run: ~/.dotfiles/git/sourcetree_custom_actions/create_fixup_commit.sh
+- Parameters: $SHA
+
+#### Amend all changes to the selected commit
+
+In SourceTree: Right click on a commit > Custom Actions > Amend all. It will amend
+all the changes to the selected commit.
+
+SourceTree custom action settings:
+- Menu caption: Amend all
+- Script to run: ~/.dotfiles/git/sourcetree_custom_actions/amend_all.sh
+- Parameters: $SHA
+
+
 ## Install
 
-```bash
+```shell
 git clone git@github.com:tothpeter/dotfiles.git
 mv ~/dotfiles ~/.dotfiles
 # Homebrew https://brew.sh
@@ -166,7 +166,7 @@ mv ~/dotfiles ~/.dotfiles
 
 ### Sync config
 
-```bash
+```shell
 ln -s ~/.dotfiles/vs_code/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.dotfiles/vs_code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s ~/.dotfiles/vs_code/tasks.json ~/Library/Application\ Support/Code/User/tasks.json
@@ -181,7 +181,7 @@ Command Palette > shell command
 
 ### Sync config
 
-```bash
+```shell
 # Specify the preferences directory
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iTerm/settings"
 
@@ -191,7 +191,7 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 ### Turn off the login banner ("Last login ...")
 
-```bash
+```shell
 touch ~/.hushlogin
 ```
 
@@ -203,7 +203,7 @@ https://ohmyz.sh/#install
 
 ### Sync config
 
-```bash
+```shell
 mv ~/.zshrc ~/.zshrc.old
 ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 ```
@@ -212,13 +212,13 @@ ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 
 It has to be listed LAST in the plugins list in `~/.zshrc` for it to be enabled.
 
-```bash
+```shell
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ### Setup local secrets
 
-```bash
+```shell
 touch $DOTFILES_PATH/local/localrc.sh
 ```
 
@@ -226,20 +226,20 @@ touch $DOTFILES_PATH/local/localrc.sh
 
 ### Sync config
 
-```bash
+```shell
 ln -s ~/.dotfiles/git/.gitconfig.global ~/.gitconfig
 ```
 
 ### Signing commits with GPG
 
-```bash
+```shell
 brew install gpg
 ln -s /Volumes/DriveD/Dropbox/work/system/.gnupg ~/.gnupg
 ```
 
 #### Sourcetree
 
-```bash
+```shell
 ln `brew --prefix gpg`/bin/gpg `brew --prefix gpg`/bin/gpg2
 ```
 
@@ -253,13 +253,13 @@ Sourcetree > commit > Commit options > Sign commit
 
 ### Install
 
-```bash
+```shell
 brew install asdf
 ```
 
 ### Update
 
-```bash
+```shell
 asdf plugin-update ruby
 ```
 
@@ -267,7 +267,7 @@ asdf plugin-update ruby
 
 ### Install
 
-```bash
+```shell
 asdf plugin add ruby
 asdf install ruby latest
 asdf global ruby latest # set global ruby version
@@ -275,14 +275,14 @@ asdf global ruby latest # set global ruby version
 
 ### Initial Set-up
 
-```bash
+```shell
 ln -s ~/.dotfiles/ruby/irbrc.symlink ~/.irbrc
 ln -s ~/.dotfiles/ruby/gemrc.symlink ~/.gemrc
 ```
 
 ### Install Rails and Bundler
 
-```bash
+```shell
 gem install rails
 gem install bundler
 ```
@@ -290,7 +290,7 @@ gem install bundler
 
 ## Other tools
 
-```bash
+```shell
 brew install fzf
 $(brew --prefix)/opt/fzf/install # To install key bindings to iTerm and fuzzy completion
 
@@ -302,7 +302,7 @@ git clone git@github.com:tothpeter/local_sherpa.git ~/.dotfiles/lib/local_sherpa
 
 ### VLC
 
-```bash
+```shell
 mv -v ~/Library/Preferences/org.videolan.vlc/vlcrc ~/.dotfiles/others/vlc/vlcrc
 ln -s ~/.dotfiles/others/vlc/vlcrc ~/Library/Preferences/org.videolan.vlc/vlcrc
 ```
@@ -310,12 +310,12 @@ ln -s ~/.dotfiles/others/vlc/vlcrc ~/Library/Preferences/org.videolan.vlc/vlcrc
 
 To check what we have:
 
-```
+```shell
 defaults read -g NSUserKeyEquivalents
 ```
 
 ### Merge All Windows shortcut for all apps (cmd+shift+m)
 
-```
+```shell
 defaults write -g NSUserKeyEquivalents -dict-add "Merge All Windows" -string '@$m'
 ```
