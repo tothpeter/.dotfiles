@@ -18,7 +18,7 @@ zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' unstagedstr '*' # Add star after the branch name if there are unstaged changes
 zstyle ':vcs_info:*' stagedstr '*' # Add star after the branch name if there are staged changes
 zstyle ':vcs_info:git:*' formats '[%b%m] '
-zstyle ':vcs_info:git:*' actionformats '%a > %10.10i | %m '
+zstyle ':vcs_info:git:*' actionformats '%a > %6.6i%m '
 zstyle ':vcs_info:git*+set-message:*' hooks git-changes
 
 +vi-git-changes() {
@@ -32,7 +32,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-changes
   pattern='^[[:space:]]*(edit|pick)[[:space:]][[:alnum:]]*[[:space:]]'
   if [[ $commit_line =~ $pattern ]]; then
     commit_message=$(echo "$commit_line" | sed -E "s/$pattern//")
-    hook_com[misc]="$commit_message"
+    hook_com[misc]=" | $commit_message"
     return
   fi
 
