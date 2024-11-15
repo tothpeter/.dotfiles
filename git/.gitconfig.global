@@ -17,3 +17,5 @@
 	template = /Users/peter/.stCommitMsg
 [push]
 	autoSetupRemote = true
+[safe]
+	bareRepository = explicit
